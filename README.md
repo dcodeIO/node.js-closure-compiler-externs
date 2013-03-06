@@ -9,12 +9,12 @@ If you are sitting on (a bunch of) externs which are not yet included, please dr
 #### Naming convention ####
 
 * Externs for core components are all lower case
-* Externs for non-core components begin with an upper case character
+* Externs for [non-core components](https://github.com/dcodeIO/node.js-closure-compiler-externs/tree/master/contrib) begin with an upper case character
 
 #### Node.js specific annotation ####
 
-If an extern file refers to a module that's usually loaded through require(moduleName), a comment is added on top of the
-file. For example for the "fs" module:
+If an extern file refers to a module that's usually loaded through var modulename = require("modulename"), a comment is
+added on top of the file. For example for the fs module:
 
 ````javascript
 /**
