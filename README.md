@@ -43,5 +43,6 @@ License
 -------
 Apache License, Version 2.0 - http://www.apache.org/licenses/LICENSE-2.0.html
 
-This repository is not officially supported by Google, Joyent or individual module authors. All rights belong to their
-respective owners.
+This repository is not officially supported by Google, Joyent or individual module authors. If the closure compiler 
+license header is used in a file, it is just there so signal that it is ok to include it in official closure channels.
+All rights belong to their respective owners.
