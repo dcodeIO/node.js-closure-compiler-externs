@@ -15,7 +15,7 @@
  */
 
 /**
- * @fileoverfiew Definitions for node's "stream" module.
+ * @fileoverfiew Definitions for node's "stream" module. Depends on "events".
  * @see http://nodejs.org/api/stream.html
  * @externs
  * @author Daniel Wirtz <dcode@dcode.io>
@@ -29,19 +29,14 @@
 
 /**
  * @constructor
+ * @extends EventEmitter
  */
 stream.ReadableStream = function() {};
 
 /**
- * @param {string} event
- * @param {function(...)} callback
- */
-stream.ReadableStream.prototype.on = function(event, callback) {};
-
-/**
  * @type {boolean}
  */
-stream.ReadableStream.prototype.readable = true;
+stream.ReadableStream.prototype.readable;
 
 /**
  * @param {string=} encoding
@@ -64,6 +59,7 @@ stream.ReadableStream.prototype.pipe = function(destination, options) {};
 
 /**
  * @constructor
+ * @extends EventEmitter
  */
 stream.WritableStream = function() {};
 
@@ -72,15 +68,9 @@ stream.WritableStream = function() {};
 stream.WritableStream.prototype.drain = function() {};
 
 /**
- * @param {string} event
- * @param {function(...)} callback
- */
-stream.WritableStream.prototype.on = function(event, callback) {};
-
-/**
  * @type {boolean}
  */
-stream.WritableStream.prototype.writable = true;
+stream.WritableStream.prototype.writable;
 
 /**
  * @param {string|buffer} buffer

@@ -15,7 +15,7 @@
  */
 
 /**
- * @fileoverview Definitions for require.js.
+ * @fileoverview Definitions for require.js inside of node.
  * @see http://requirejs.org/docs/api.html
  * @externs
  * @author Daniel Wirtz <dcode@dcode.io>
@@ -42,25 +42,9 @@ define.amd;
 function requirejs(deps, callback, errback, optional) {}
 
 /**
- * @typedef {Object}
+ * @typedef {{nodeRequire: boolean, paths: Object.<string,string>, shim: Object.<string,string>}}
  */
-var RequireConfig = {
-    
-    /**
-     * @type {string|null}
-     */
-    nodeRequire: null,
-    
-    /**
-     * @type {Object.<string,*>}
-     */
-    paths: {},
-
-    /**
-     * @type {Object.<string,*>}
-     */
-    shim: {}
-};
+var RequireConfig;
 
 /**
  * @param {RequireConfig} config

@@ -31,51 +31,61 @@ var os = {};
 
 /**
  * @return {string}
+ * @nosideeffects
  */
 os.tmdDir = function() {};
 
 /**
  * @return {string}
+ * @nosideeffects
  */
 os.hostname = function() {};
 
 /**
  * @return {string}
+ * @nosideeffects
  */
 os.type = function() {};
 
 /**
  * @return {string}
+ * @nosideeffects
  */
 os.platform = function() {};
 
 /**
  * @return {string}
+ * @nosideeffects
  */
 os.arch = function() {};
 
 /**
  * @return {string}
+ * @nosideeffects
  */
 os.release = function() {};
 
 /**
  * @return {number}
+ * @nosideeffects
  */
 os.uptime = function() {};
 
 /**
  * @return {array.<number>}
+ * @nosideeffects
  */
 os.loadavg = function() {};
 
 /**
  * @return {number}
+ * @nosideeffects
  */
 os.totalmem = function() {};
 
 /**
  * @return {number}
+ * @nosideeffects
  */
 os.freemem = function() {};
 
@@ -86,6 +96,7 @@ var osCpusInfo;
 
 /**
  * @return {array.<osCpusInfo>}
+ * @nosideeffects
  */
 os.cpus = function() {};
 
@@ -96,6 +107,7 @@ var osNetworkInterfacesInfo;
 
 /**
  * @return {object.<string,osNetworkInterfacesInfo>}
+ * @nosideeffects
  */
 os.networkInterfaces = function() {};
 

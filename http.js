@@ -15,7 +15,7 @@
  */
 
 /**
- * @fileoverview Definitions for node's "http" module.
+ * @fileoverview Definitions for node's "http" module. Depends on "events".
  * @see http://nodejs.org/api/http.html
  * @externs
  */

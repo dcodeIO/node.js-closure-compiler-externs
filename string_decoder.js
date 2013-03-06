@@ -15,32 +15,31 @@
  */
 
 /**
- * @fileoverview Definitions for node's core.
- * @see http://nodejs.org/api
+ * @fileoverview Definitions for node's "string_decoder" module
+ * @see http://nodejs.org/api/string_decoder.html
  * @externs
+ * @author Daniel Wirtz <dcode@dcode.io>
  */
 
 /**
- * @param name
- * @return {*}
+ BEGIN_NODE_INCLUDE
+ var StringDecoder = require('string_decoder');
+ END_NODE_INCLUDE
  */
-function require(name) {}
 
 /**
- * @type {Object.<string,*>}
+ * @param {string} encoding
+ * @constructor
  */
-var console = {};
+var StringDecoder = function(encoding) {};
 
 /**
- * @param {*} msg
+ * @param {Array|Buffer} buffer
+ * @return {string}
  */
-console.log = function(msg) {};
+StringDecoder.prototype.write = function(buffer) {};
 
 /**
- * @param {*} msg
+ * @return {string}
  */
-console.dir = function(msg) {};
-
-/**
- */
-Object.prototype.inspect = function() {};
+StringDecoder.prototype.toString = function() {};

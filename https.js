@@ -15,7 +15,7 @@
  */
 
 /**
- * @fileoverview Definitions for node's "https" module.
+ * @fileoverview Definitions for node's "https" module. Depends on "events".
  * @see http://nodejs.org/api/https.html
  * @externs
  */
@@ -73,3 +73,5 @@ https.Agent = function() {};
  * @type {https.Agent}
  */
 https.globalAgent;
+
+// TODO: Finish...

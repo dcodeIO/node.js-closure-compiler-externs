@@ -15,7 +15,7 @@
  */
 
 /**
- * @fileoverfiew Definitions for node's "ws" module.
+ * @fileoverfiew Definitions for node's "ws" module. Depends on "events".
  * @see https://github.com/einaros/ws/blob/master/doc/ws.md
  * @externs
  * @author Daniel Wirtz <dcode@code.io>
@@ -34,17 +34,12 @@
 var ws = function(path) {};
 
 /**
- * @param {object.<string,*>=} options
+ * @param {Object.<string,*>=} options
  * @param {function(...)=} callback
  * @constructor
+ * @extends EventEmitter
  */
 ws.Server = function(options, callback) {};
-
-/**
- * @param {string} event
- * @param {!function(...)} callback
- */
-ws.Server.prototype.on = function(event, callback) {};
 
 /**
  * @param {number=} code
@@ -64,33 +59,34 @@ ws.Server.prototype.handleUpgrade = function(request, socket, upgradeHead, callb
  * @param {string} address
  * @param {object.<string,*>=} options
  * @constructor
+ * @extends EventEmitter
  */
 ws.WebSocket = function(address, options) {}
 
 /**
  * @type {number}
  */
-ws.WebSocket.prototype.bytesReceived = 0;
+ws.WebSocket.prototype.bytesReceived;
 
 /**
  * @type {*}
  */
-ws.WebSocket.prototype.readyState = "";
+ws.WebSocket.prototype.readyState;
 
 /**
  * @type {string}
  */
-ws.WebSocket.prototype.protocolVersion = "";
+ws.WebSocket.prototype.protocolVersion;
 
 /**
  * @type {string}
  */
-ws.WebSocket.prototype.url = "";
+ws.WebSocket.prototype.url;
 
 /**
  * @type {object.<string,*>}
  */
-ws.WebSocket.prototype.supports = {};
+ws.WebSocket.prototype.supports;
 
 /**
  * @param {number} code
@@ -161,15 +157,3 @@ ws.WebSocket.prototype.onclose = function(code, message) {};
  * @param {object.<string,*>} flags
  */
 ws.WebSocket.prototype.onmessage = function(data, flags) {};
-
-/**
- * @param {string} method
- * @param {!function(...)} listener
- */
-ws.WebSocket.prototype.addEventListener = function(method, listener) {};
-
-/**
- * @param {striing} method
- * @param {!function(...)} listener
- */
-ws.WebSocket.prototype.on = function(method, listener) {};

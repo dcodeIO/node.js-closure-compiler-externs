@@ -15,32 +15,34 @@
  */
 
 /**
- * @fileoverview Definitions for node's core.
- * @see http://nodejs.org/api
+ * @fileoverview Definitions for node's "timers" module
+ * @see http://nodejs.org/api/timers.html
  * @externs
+ * @author Daniel Wirtz <dcode@dcode.io>
  */
 
 /**
- * @param name
+ * @param {function} callback
+ * @param {number} delay
+ * @param {...*} var_args
  * @return {*}
  */
-function require(name) {}
+function setTimeout(callback, delay, var_args) {};
 
 /**
- * @type {Object.<string,*>}
+ * @param {*} timeoutId
  */
-var console = {};
+function clearTimeout(timeoutId) {};
 
 /**
- * @param {*} msg
+ * @param {function} callback
+ * @param {number} delay
+ * @param {...*} var_args
+ * @return {*}
  */
-console.log = function(msg) {};
+function setInterval(callback, delay, var_args) {};
 
 /**
- * @param {*} msg
+ * @param {*} intervalId
  */
-console.dir = function(msg) {};
-
-/**
- */
-Object.prototype.inspect = function() {};
+function clearInterval(intervalId) {};

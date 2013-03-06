@@ -15,154 +15,154 @@
  */
 
 /**
- * @fileoverview Definitions for node's global process object.
+ * @fileoverview Definitions for node's global process object. Depends on "events".
  * @see http://nodejs.org/api/process.html
  * @externs
  * @author Daniel Wirtz <dcode@dcode.io>
  */
 
 /**
+ * @extends {EventEmitter}
+ */
+var process = function() {};
+
+/**
+ * @type {stream.ReadableStream}
+ */
+process.stdin;
+
+/**
+ * @type {stream.WritableStream}
+ */
+process.stdout;
+
+/**
+ * @type {stream.WritableStream}
+ */
+process.stderr;
+
+/**
+ * @type {array,<string>}
+ */
+process.argv;
+
+/**
+ * @type {string}
+ */
+process.execPath;
+
+/**
+ */
+process.abort = function() {};
+
+/**
+ * @param {string} directory
+ */
+process.chdir = function(directory) {};
+
+/**
+ * @return {string}
+ * @nosideeffects
+ */
+process.cwd = function() {};
+
+/**
+ * @type {object.<string,string>}
+ */
+process.env;
+
+/**
+ * @param {number=} code
+ */
+process.exit = function(code) {};
+
+/**
+ * @return {number}
+ * @nosideeffects
+ */
+process.getgid = function() {};
+
+/**
+ * @param {number} id
+ */
+process.setgid = function(id) {};
+
+/**
+ * @return {number}
+ * @nosideeffects
+ */
+process.getuid = function() {};
+
+/**
+ * @param {number} id
+ */
+process.setuid = function(id) {};
+
+/**
+ * @type {!string}
+ */
+process.version;
+
+/**
+ * @type {Object.<string,string>}
+ */
+process.versions;
+
+/**
  * @type {object.<string,*>}
  */
-var process = {
-    /**
-     * @type {stream.ReadableStream}
-     */
-    stdin: {},
+process.config;
 
-    /**
-     * @type {stream.WritableStream}
-     */
-    stdout: {},
+/**
+ * @param {number} pid
+ * @param {string=} signal
+ */
+process.kill = function(pid, signal) {};
 
-    /**
-     * @type {stream.WritableStream}
-     */
-    stderr: {},
+/**
+ * @type {number}
+ */
+process.pid;
 
-    /**
-     * @type {array,<string>}
-     */
-    argv: {},
+/**
+ * @type {string}
+ */
+process.title;
 
-    /**
-     * @type {string}
-     */
-    execPath: "",
+/**
+ * @type {string}
+ */
+process.arch;
 
-    /**
-     */
-    abort: function() {},
+/**
+ * @type {string}
+ */
+process.platform;
 
-    /**
-     * @param {string} directory
-     */
-    chdir: function(directory) {},
+/**
+ * @return {object.<string,number}
+ * @nosideeffects
+ */
+process.memoryUsage = function() {};
 
-    /**
-     * @return {string}
-     */
-    cwd: function() {},
+/**
+ * @param {!function} callback
+ */
+process.nextTick = function(callback) {};
 
-    /**
-     * @type {object.<string,string>}
-     */
-    env: {},
+/**
+ * @param {number=} mask
+ */
+process.umask = function(mask) {};
 
-    /**
-     * @param {number=} code
-     */
-    exit: function(code) {},
+/**
+ * @return {number}
+ * @nosideeffects
+ */
+process.uptime = function() {};
 
-    /**
-     * @return {number}
-     */
-    getgid: function() {},
-
-    /**
-     * @param {number} id
-     */
-    setgid: function(id) {},
-
-    /**
-     * @return {number}
-     */
-    getuid: function() {},
-
-    /**
-     * @param {number} id
-     */
-    setuid: function(id) {},
-
-    /**
-     * @type {!string}
-     */
-    version: "",
-
-    /**
-     * @type {object.<string,string>}
-     */
-    versions: {},
-
-    /**
-     * @type {object.<string,*>}
-     */
-    config: {},
-
-    /**
-     * @param {number} pid
-     * @param {string=} signal
-     */
-    kill: function(pid, signal) {},
-
-    /**
-     * @type {number}
-     */
-    pid: 0,
-
-    /**
-     * @type {string}
-     */
-    title: "",
-
-    /**
-     * @type {string}
-     */
-    arch: "",
-
-    /**
-     * @type {string}
-     */
-    platform: "",
-
-    /**
-     * @return {object.<string,number}
-     */
-    memoryUsage: function() {},
-
-    /**
-     * @param {!function} callback
-     */
-    nextTick: function(callback) {},
-
-    /**
-     * @param {number=} mask
-     */
-    umask: function(mask) {},
-
-    /**
-     * @return {number}
-     */
-    uptime: function() {},
-
-    /**
-     * @return {number}
-     */
-    hrtime: function() {},
-
-    /**
-     * @param {string} event
-     * @param {!function(...)} callback
-     */
-    on: function(event, callback) {}
-};
+/**
+ * @return {number}
+ * @nosideeffects
+ */
+process.hrtime = function() {};
