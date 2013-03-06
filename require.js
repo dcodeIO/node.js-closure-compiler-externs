@@ -29,6 +29,11 @@
 function define(name, deps, callback) {}
 
 /**
+ * @type {boolean}
+ */
+define.amd;
+
+/**
  * @param {string|Array.<string>|Object.<string,*>} deps
  * @param {Function=|string|Array.<string>} callback
  * @param {Function=} errback
