@@ -23,63 +23,68 @@
 
 /**
 BEGIN_NODE_INCLUDE
-var EventEmitter = require('events').EventEmitter;
+var events = require('events');
 END_NODE_INCLUDE
  */
 
 /**
+ * @type {Object.<string,*>}
+ */
+var events = {};
+
+/**
  * @constructor
  */
-var EventEmitter = function() {};
+events.EventEmitter = function() {};
 
 /**
  * @param {string} event
  * @param {function(...)} listener
- * @return {EventEmitter}
+ * @return {events.EventEmitter}
  */
-EventEmitter.prototype.addListener = function(event, listener) {};
+events.EventEmitter.prototype.addListener = function(event, listener) {};
 
 /**
  * @param {string} event
  * @param {function(...)} listener
- * @return {EventEmitter}
+ * @return {events.EventEmitter}
  */
-EventEmitter.prototype.on = function(event, listener) {};
+events.EventEmitter.prototype.on = function(event, listener) {};
 
 /**
  * @param {string} event
  * @param {function(...)} listener
- * @return {EventEmitter}
+ * @return {events.EventEmitter}
  */
-EventEmitter.prototype.once = function(event, listener) {};
+events.EventEmitter.prototype.once = function(event, listener) {};
 
 /**
  * @param {string} event
  * @param {function(...)} listener
- * @return {EventEmitter}
+ * @return {events.EventEmitter}
  */
-EventEmitter.prototype.removeListener = function(event, listener) {};
+events.EventEmitter.prototype.removeListener = function(event, listener) {};
 
 /**
  * @param {string=} event
- * @return {EventEmitter}
+ * @return {events.EventEmitter}
  */
-EventEmitter.prototype.removeAllListeners = function(event) {};
+events.EventEmitter.prototype.removeAllListeners = function(event) {};
 
 /**
  * @param {number} n
  */
-EventEmitter.prototype.setMaxListeners = function(n) {};
+events.EventEmitter.prototype.setMaxListeners = function(n) {};
 
 /**
  * @param {string} event
  * @return {Array.<function(...)>}
  */
-EventEmitter.prototype.listeners = function(event) {};
+events.EventEmitter.prototype.listeners = function(event) {};
 
 /**
  * @param {string} event
  * @param {...*} var_args
  * @return {boolean}
  */
-EventEmitter.prototype.emit = function(event, var_args) {};
+events.EventEmitter.prototype.emit = function(event, var_args) {};

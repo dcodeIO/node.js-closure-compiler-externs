@@ -15,14 +15,15 @@
  */
 
 /**
- * @fileoverview Definitions for node's global process object. Depends on "events".
+ * @fileoverview Definitions for node's global process object. Depends on the stream module.
  * @see http://nodejs.org/api/process.html
  * @externs
  * @author Daniel Wirtz <dcode@dcode.io>
  */
 
 /**
- * @extends {EventEmitter}
+ * @constructor
+ * @extends events.EventEmitter
  */
 var process = function() {};
 

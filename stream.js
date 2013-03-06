@@ -15,8 +15,9 @@
  */
 
 /**
- * @fileoverfiew Definitions for node's "stream" module. Depends on "events".
+ * @fileoverfiew Definitions for node's stream module. Depends on the events module.
  * @see http://nodejs.org/api/stream.html
+ * @see https://github.com/joyent/node/blob/master/lib/stream.js
  * @externs
  * @author Daniel Wirtz <dcode@dcode.io>
  */
@@ -29,7 +30,7 @@
 
 /**
  * @constructor
- * @extends EventEmitter
+ * @extends events.EventEmitter
  */
 stream.ReadableStream = function() {};
 
@@ -59,7 +60,7 @@ stream.ReadableStream.prototype.pipe = function(destination, options) {};
 
 /**
  * @constructor
- * @extends EventEmitter
+ * @extends events.EventEmitter
  */
 stream.WritableStream = function() {};
 

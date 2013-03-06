@@ -15,7 +15,7 @@
  */
 
 /**
- * @fileoverview Definitions for node's "fs" module.
+ * @fileoverview Definitions for node's fs module. Depends on the stream and events module.
  * @see http://nodejs.org/api/fs.html
  * @externs
  * @author Daniel Wirtz <dcode@dcode.io>
@@ -599,46 +599,37 @@ fs.Stats.prototype.ctime = 0;
 /**
  * @param {string} path
  * @param {{flags: string, encoding: ?string, fd: *, mode: number, bufferSize: number}=} options
+ * @return {fs.ReadStream}
  * @nosideeffects
  */
 fs.createReadStream = function(path, options) {};
 
 /**
  * @constructor
- * @extends {stream.ReadableStream}
+ * @extends stream.ReadableStream
  */
 fs.ReadStream = function() {};
 
 /**
  * @param {string} path
  * @param {{flags: string, encoding: ?string, mode: number}=} options
+ * @return {fs.WriteStream}
  * @nosideeffects
  */
 fs.createWriteStream = function(path, options) {};
 
 /**
  * @constructor
- * @extends {stream.WritableStream}
+ * @extends stream.WritableStream
  */
 fs.WriteStream = function() {};
 
 /**
- * @param {string} event
- * @param {function(...)} callback
- */
-fs.WriteStream.prototype.on = function(event, callback) {};
-
-/**
  * @constructor
+ * @extends events.EventEmitter
  */
 fs.FSWatcher = function() {};
 
 /**
  */
 fs.FSWatcher.prototype.close = function() {};
-
-/**
- * @param {string} event
- * @param {function(...)} callback
- */
-fs.FSWatcher.prototype.on = function(event, callback) {};

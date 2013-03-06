@@ -15,8 +15,9 @@
  */
 
 /**
- * @fileoverview Definitions for node's "string_decoder" module
+ * @fileoverview Definitions for node's string_decoder module. Depends on the buffer module.
  * @see http://nodejs.org/api/string_decoder.html
+ * @see https://github.com/joyent/node/blob/master/lib/string_decoder.js
  * @externs
  * @author Daniel Wirtz <dcode@dcode.io>
  */
@@ -34,7 +35,7 @@
 var StringDecoder = function(encoding) {};
 
 /**
- * @param {Array|Buffer} buffer
+ * @param {buffer.Buffer} buffer
  * @return {string}
  */
 StringDecoder.prototype.write = function(buffer) {};
@@ -43,3 +44,15 @@ StringDecoder.prototype.write = function(buffer) {};
  * @return {string}
  */
 StringDecoder.prototype.toString = function() {};
+
+/**
+ * @param {buffer.Buffer} buffer
+ * @return {number}
+ */
+StringDecoder.prototype.detectIncompleteChar = function(buffer) {};
+
+/**
+ * @param {buffer.Buffer} buffer
+ * @return {string}
+ */
+StringDecoder.prototype.end = function(buffer) {};

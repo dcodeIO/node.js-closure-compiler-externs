@@ -15,8 +15,9 @@
  */
 
 /**
- * @fileoverfiew Definitions for node's "vm" module.
+ * @fileoverfiew Definitions for node's vm module.
  * @see http://nodejs.org/api/vm.html
+ * @see https://github.com/joyent/node/blob/master/lib/vm.js
  * @externs
  * @author Daniel Wirtz <dcode@dcode.io>
  */
@@ -34,9 +35,8 @@ var vm = {};
 
 /**
  * @constructor
- * @private
  */
-vm.Context = function() {};
+vm.Context = function() {}; // Does not really exist
 
 /**
  * @param {string} code

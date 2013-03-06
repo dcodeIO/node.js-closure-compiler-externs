@@ -16,31 +16,93 @@
 
 /**
  * @fileoverview Definitions for node's core.
- * @see http://nodejs.org/api
+ * @see http://nodejs.org/api/globals.html
+ * @see http://nodejs.org/api/modules.html
  * @externs
+ * @author Daniel Wirtz <dcode@dcode.io>
  */
+
+/**
+ */
+Object.prototype.inspect = function() {};
 
 /**
  * @param name
  * @return {*}
  */
-function require(name) {}
+var require = function(name) {}
+
+/**
+ * @return {string}
+ */
+require.resolve = function() {};
 
 /**
  * @type {Object.<string,*>}
  */
-var console = {};
+require.cache;
 
 /**
- * @param {*} msg
+ * @type {Array}
  */
-console.log = function(msg) {};
+require.extensions;
 
 /**
- * @param {*} msg
+ * @type {string}
  */
-console.dir = function(msg) {};
+var __filename;
 
 /**
+ * @type {string}
  */
-Object.prototype.inspect = function() {};
+var __dirname;
+
+/**
+ * @type {Object}
+ */
+var module = {};
+
+/**
+ * @type {*}
+ */
+var exports;
+
+/**
+ * @type {Object.<string.*>}
+ */
+module.exports;
+
+/**
+ * @type {require}
+ */
+module.require;
+
+/**
+ * @type {string}
+ */
+module.filename;
+
+/**
+ * @type {boolean}
+ */
+module.loaded;
+
+/**
+ * @type {*}
+ */
+module.parent;
+
+/**
+ * @type {Array}
+ */
+module.children;
+
+/**
+ * @type {Object.<string,*>}
+ */
+var global = {};
+
+/**
+ * @type {buffer.Buffer}
+ */
+var Buffer;

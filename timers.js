@@ -15,8 +15,9 @@
  */
 
 /**
- * @fileoverview Definitions for node's "timers" module
+ * @fileoverview Definitions for node's timers module.
  * @see http://nodejs.org/api/timers.html
+ * @see https://github.com/joyent/node/blob/master/lib/timers.js
  * @externs
  * @author Daniel Wirtz <dcode@dcode.io>
  */

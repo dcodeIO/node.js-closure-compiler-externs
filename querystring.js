@@ -15,49 +15,56 @@
  */
 
 /**
- * @fileoverfiew Definitions for node's url module.
- * @see http://nodejs.org/api/url.html
- * @see https://github.com/joyent/node/blob/master/lib/url.js
+ * @fileoverview Definitions for node's querystring module.
+ * @see http://nodejs.org/api/querystring.html
+ * @see https://github.com/joyent/node/blob/master/lib/querystring.js
  * @externs
  * @author Daniel Wirtz <dcode@dcode.io>
  */
 
 /**
  BEGIN_NODE_INCLUDE
- var url = require('url');
+ var querystring = require('querystring');
  END_NODE_INCLUDE
  */
 
 /**
  * @type {Object.<string,*>}
  */
-var url = {};
+var querystring = {};
 
 /**
- * @typedef {{href: ?string, protocol: ?string, host: ?string, auth: ?string, hostname: ?string, port: ?string, pathname: ?string, search: ?string, path: ?string, query: ?string, hash: ?string}}
- */
-var URL;
-
-/**
- * @param {string} urlStr
- * @param {boolean=} parseQueryString
- * @param {boolean=} slashesDenoteHost
- * @return {URL}
- * @nosideeffects
- */
-url.parse = function(urlStr, parseQueryString, slashesDenoteHost) {};
-
-/**
- * @param {URL} urlObj
+ * @param {Object.<string,*>} obj
+ * @param {string=} sep
+ * @param {string=} eq
  * @return {string}
  * @nosideeffects
  */
-url.format = function(urlObj) {};
+querystring.stringify = function(obj, sep, eq) {};
 
 /**
- * @param {string} from
- * @param {string} to
- * @return {string}
+ * @param {string} str
+ * @param {string=} sep
+ * @param {string=} eq
+ * @param {*=} options
  * @nosideeffects
  */
-url.resolve = function(from, to) {};
+querystring.parse = function(str, sep, eq, options) {};
+
+/**
+ * @param {string} str
+ * @return {string}
+ */
+querystring.escape = function(str) {};
+
+/**
+ * @param {string} str
+ * @return {string}
+ */
+querystring.unescape = function(str) {};
+
+/**
+ * @param {buffer.Buffer} s
+ * @param {boolean} decodeSpaces
+ */
+querystring.unescapeBuffer = function(s, decodeSpaces) {};

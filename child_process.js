@@ -15,7 +15,7 @@
  */
 
 /**
- * @fileoverview Definitions for node's "child_process" module Depends on "events".
+ * @fileoverview Definitions for node's child_process module. Depends on the events module.
  * @see http://nodejs.org/api/child_process.html
  * @externs
  * @author Daniel Wirtz <dcode@dcode.io>
@@ -35,7 +35,7 @@ var child_process = {};
 /**
  * @constructor
  * @param {...*} var_args
- * @extends EventEmitter
+ * @extends events.EventEmitter
  */
 child_process.ChildProcess = function(var_args) {}; // Private?
 

@@ -15,7 +15,7 @@
  */
 
 /**
- * @fileoverfiew Definitions for node's "ws" module. Depends on "events".
+ * @fileoverfiew Definitions for the ws module. Depends on the events module.
  * @see https://github.com/einaros/ws/blob/master/doc/ws.md
  * @externs
  * @author Daniel Wirtz <dcode@code.io>
@@ -37,7 +37,7 @@ var ws = function(path) {};
  * @param {Object.<string,*>=} options
  * @param {function(...)=} callback
  * @constructor
- * @extends EventEmitter
+ * @extends events.EventEmitter
  */
 ws.Server = function(options, callback) {};
 
@@ -59,7 +59,7 @@ ws.Server.prototype.handleUpgrade = function(request, socket, upgradeHead, callb
  * @param {string} address
  * @param {object.<string,*>=} options
  * @constructor
- * @extends EventEmitter
+ * @extends events.EventEmitter
  */
 ws.WebSocket = function(address, options) {}
 

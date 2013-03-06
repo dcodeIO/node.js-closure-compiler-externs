@@ -15,7 +15,7 @@
  */
 
 /**
- * @fileoverview Definitions for node's "https" module. Depends on "events".
+ * @fileoverview Definitions for node's https module. Depends on the events module.
  * @see http://nodejs.org/api/https.html
  * @externs
  */
@@ -30,7 +30,7 @@ var https = {};
 
 /**
  * @constructor
- * @extends {EventEmitter}
+ * @extends events.EventEmitter
  */
 https.Server = function() {};
 
@@ -66,6 +66,7 @@ https.get = function(options, callback) {};
 
 /**
  * @constructor
+ * @extends events.EventEmitter
  */
 https.Agent = function() {};
 

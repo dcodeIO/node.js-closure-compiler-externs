@@ -15,7 +15,7 @@
  */
 
 /**
- * @fileoverview Definitions for node's "http" module. Depends on "events".
+ * @fileoverview Definitions for node's http module. Depends on the events module.
  * @see http://nodejs.org/api/http.html
  * @externs
  */
@@ -42,7 +42,7 @@ http.createServer = function(listener) {};
 /**
  * @param {http.requestListener=} listener  
  * @constructor
- * @extends {EventEmitter}
+ * @extends events.EventEmitter
  */
 http.Server = function(listener) {};
 
@@ -59,7 +59,7 @@ http.Server.prototype.close = function() {};
 
 /**
  * @constructor
- * @extends {EventEmitter}
+ * @extends events.EventEmitter
  * @private
  */
 http.ServerRequest = function() {};
@@ -119,7 +119,7 @@ http.ServerRequest.prototype.connection;
 
 /**
  * @constructor
- * @extends {EventEmitter}
+ * @extends events.EventEmitter
  * @private
  */
 http.ServerResponse = function() {};
@@ -176,7 +176,7 @@ http.ServerResponse.prototype.end = function(data, encoding) {};
 
 /**
  * @constructor
- * @extends {EventEmitter}
+ * @extends events.EventEmitter
  * @private
  */
 http.ClientRequest = function() {};
@@ -199,7 +199,7 @@ http.ClientRequest.prototype.abort = function() {};
 
 /**
  * @constructor
- * @extends {EventEmitter}
+ * @extends events.EventEmitter
  * @private
  */
 http.ClientResponse = function() {};
