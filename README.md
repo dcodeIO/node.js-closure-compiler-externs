@@ -24,7 +24,7 @@ added on top of the file. For example for the fs module:
  */
 ````
 
-NOTE: This comment on its own does nothing. But if you stick to the template, that is including the fs module exactly
+**NOTE:** This comment on its own does nothing. But if you stick to the template, that is including the fs module exactly
 the same way naming it also "fs", the compiler will know how to handle the module and its subcomponents. For example:
 
 ```javascript
@@ -36,7 +36,8 @@ var events = require("events");
 var EventEmitter = events.EventEmitter;
 ```
 
-If a file requires a dependency, it is named in the `@fileoverview` declaration.
+If a file requires a dependency, it is named in the `@fileoverview` declaration. You should then include the dependency
+in your compile step, too.
 
 License
 -------
