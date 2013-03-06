@@ -39,6 +39,11 @@ var EventEmitter = events.EventEmitter;
 If a file requires a dependency, it is named in the `@fileoverview` declaration. You should then include the dependency
 in your compile step, too.
 
+Downloads
+---------
+* [ZIP-Archive](https://github.com/dcodeIO/node.js-closure-compiler-externs/archive/master.zip)
+* [Tarball](https://github.com/dcodeIO/node.js-closure-compiler-externs/tarball/master)
+
 License
 -------
 Apache License, Version 2.0 - http://www.apache.org/licenses/LICENSE-2.0.html
