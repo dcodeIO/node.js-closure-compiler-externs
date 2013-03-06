@@ -4,6 +4,8 @@ A collection of node.js externs for use with [Closure Compiler](https://develope
 
 See: [Advanced Compilation and Externs](https://developers.google.com/closure/compiler/docs/api-tutorial3) for details
 
+If you are sitting on (a bunch of) externs which are not yet included, please drop me a note or a pull request.
+
 #### Naming convention ####
 
 * Externs for core components are all lower case
