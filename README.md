@@ -13,8 +13,8 @@ If you are sitting on (a bunch of) externs which are not yet included, please dr
 
 #### Node.js specific annotation ####
 
-If an extern file refers to a module that's usually loaded through var modulename = require("modulename"), a comment is
-added on top of the file. For example for the fs module:
+If an extern file refers to a module that's usually loaded through `var modulename = require("modulename")`, a comment
+is added on top of the file. For example for the fs module:
 
 ````javascript
 /**
