@@ -41,7 +41,7 @@ in your compile step, too.
 
 Testing
 -------
-Externs are automatically validated through a test run with [ClosureCompiler.s](https://github.com/dcodeIO/ClosureCompiler.js).
+Externs are automatically validated through a [ClosureCompiler.js](https://github.com/dcodeIO/ClosureCompiler.js) test run.
 
 Downloads
 ---------
