@@ -41,7 +41,8 @@ in your compile step, too.
 
 Testing
 -------
-Externs are automatically validated through a [ClosureCompiler.js](https://github.com/dcodeIO/ClosureCompiler.js) test run.
+Externs are automatically syntax-validated through a [ClosureCompiler.js](https://github.com/dcodeIO/ClosureCompiler.js)
+test run. This does not imply that the extern is complete or does actually represent the underlying API (but it should).
 
 Downloads
 ---------
