@@ -57,10 +57,12 @@ express.Router = function() {};
 express.errorHandler = function() {};
 
 /**
- * @type {function}
+ * @name express.static
+ * @function
  * @return {*}
  */
-express["static"] = function() {};
+// Error: .\contrib\Express.js:63: ERROR - Parse error. missing name after . operator
+// express.static = function() {};
 
 /**
  * @type {string}

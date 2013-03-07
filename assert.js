@@ -112,12 +112,15 @@ assert.strictEqual = function(actual, expected, message) {};
 assert.notStrictEqual = function(actual, expected, message) {};
 
 /**
+ * @name assert.throws
+ * @function
  * @param {function} block
  * @param {Function|RegExp|function(*)} error
  * @param {string=} message
  * @throws {assert.AssertionError}
  */
-assert.throws = function(block, error, message) {};
+// Error: .\assert.js:120: ERROR - Parse error. missing name after . operator
+// assert.throws = function(block, error, message) {};
 
 /**
  * @param {function} block

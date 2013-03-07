@@ -90,6 +90,16 @@ ByteBuffer.allocate = function(capacity, littleEndian) {};
 ByteBuffer.wrap = function(buffer, littleEndian) {};
 
 /**
+ * @return {ByteBuffer}
+ */
+ByteBuffer.prototype.LE = function() {};
+
+/**
+ * @return {ByteBuffer}
+ */
+ByteBuffer.prototype.BE = function() {};
+
+/**
  * @param {number} capacity
  * @return {boolean}
  */

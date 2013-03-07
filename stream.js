@@ -29,6 +29,11 @@
  */
 
 /**
+ * @type {Object.<string,*>}
+ */
+var stream = {};
+
+/**
  * @constructor
  * @extends events.EventEmitter
  */
