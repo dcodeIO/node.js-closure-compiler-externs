@@ -1,4 +1,4 @@
-node.js Closure Compiler externs [![Build Status](https://travis-ci.org/dcodeIO/node.js-closure-compiler-externs.png?branch=master)](https://travis-ci.org/dcodeIO/node.js-closure-compiler-externs)
+![node.js Closure Compiler externs](https://raw.github.com/dcodeIO/node.js-closure-compiler-externs/master/NodejsClosureCompilerExterns.png)
 ================================
 A collection of node.js externs for use with [Closure Compiler](https://developers.google.com/closure/compiler/docs/overview)
 / [ClosureCompiler.js](https://github.com/dcodeIO/ClosureCompiler.js).
@@ -40,7 +40,7 @@ var EventEmitter = events.EventEmitter;
 If a file requires a dependency, it is named in the `@fileoverview` declaration. You should then include the dependency
 in your compile step, too.
 
-Testing
+Testing [![Build Status](https://travis-ci.org/dcodeIO/node.js-closure-compiler-externs.png?branch=master)](https://travis-ci.org/dcodeIO/node.js-closure-compiler-externs)
 -------
 Externs are automatically syntax-validated through a [ClosureCompiler.js](https://github.com/dcodeIO/ClosureCompiler.js)
 test run. This does not imply that the extern is complete or does actually represent the underlying API (but it should).
