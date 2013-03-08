@@ -17,6 +17,7 @@
 /**
  * @fileoverview Definitions for node's cluster module. Depends on the events module.
  * @see http://nodejs.org/api/cluster.html
+ * @see https://github.com/joyent/node/blob/master/lib/cluster.js
  * @externs
  * @author Daniel Wirtz <dcode@dcode.io>
  */
@@ -74,7 +75,7 @@ cluster.disconnect = function(callback) {};
 cluster.worker;
 
 /**
- * @type {Object.<string,cluster.Worker>}
+ * @type {?Object.<string,cluster.Worker>}
  */
 cluster.workers;
 

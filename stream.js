@@ -29,13 +29,19 @@
  */
 
 /**
- * @type {Object.<string,*>}
+ * @constructor
+ * @extends events.EventEmitter
  */
-var stream = {};
+var stream = function() {};
+
+/**
+ * @type {stream}
+ */
+stream.Stream = function() {};
 
 /**
  * @constructor
- * @extends events.EventEmitter
+ * @extends stream
  */
 stream.ReadableStream = function() {};
 
@@ -65,7 +71,7 @@ stream.ReadableStream.prototype.pipe = function(destination, options) {};
 
 /**
  * @constructor
- * @extends events.EventEmitter
+ * @extends stream
  */
 stream.WritableStream = function() {};
 

@@ -17,6 +17,7 @@
 /**
  * @fileoverview Definitions for node's http module. Depends on the events module.
  * @see http://nodejs.org/api/http.html
+ * @see https://github.com/joyent/node/blob/master/lib/http.js
  * @externs
  */
 
@@ -260,3 +261,29 @@ http.request = function(options, callback) {};
  * @return {http.ClientRequest}
  */
 http.get = function(options, callback) {};
+
+/**
+ * @constructor
+ * @extends events.EventEmitter
+ */
+http.Agent = function() {};
+
+/**
+ * @type {number}
+ */
+http.Agent.prototype.maxSockets;
+
+/**
+ * @type {number}
+ */
+http.Agent.prototype.sockets;
+
+/**
+ * @type {Array.<http.ClientRequest>}
+ */
+http.Agent.prototype.requests;
+
+/**
+ * @type {http.Agent}
+ */
+http.globalAgent;

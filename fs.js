@@ -17,6 +17,7 @@
 /**
  * @fileoverview Definitions for node's fs module. Depends on the stream and events module.
  * @see http://nodejs.org/api/fs.html
+ * @see https://github.com/joyent/node/blob/master/lib/fs.js
  * @externs
  * @author Daniel Wirtz <dcode@dcode.io>
  */

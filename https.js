@@ -15,8 +15,9 @@
  */
 
 /**
- * @fileoverview Definitions for node's https module. Depends on the events module.
+ * @fileoverview Definitions for node's https module. Depends on the tls module.
  * @see http://nodejs.org/api/https.html
+ * @see https://github.com/joyent/node/blob/master/lib/https.js
  * @externs
  */
 
@@ -30,7 +31,7 @@ var https = {};
 
 /**
  * @constructor
- * @extends events.EventEmitter
+ * @extends tls.Server
  */
 https.Server = function() {};
 
@@ -45,20 +46,25 @@ https.Server.prototype.listen = function(var_args) {};
 https.Server.prototype.close = function(callback) {};
 
 /**
- * @param {Object.<string,*>} options
+ * @param {tls.CreateOptions} options
  * @param {function(https.Request, https.Response)=} requestListener
  */
 https.createServer = function(options, requestListener) {};
 
 /**
- * @param {Object.<string,*>} options
+ * @typedef {{host: ?string, hostname: ?string, port: ?number, method: ?string, path: ?string, headers: ?Object.<string,string>, auth: ?string, agent: ?(https.Agent|boolean), pfx: ?(string|buffer.Buffer), key: ?(string|buffer.Buffer), passphrase: ?string, cert: ?string|buffer.Buffer, ca: ?Array.<string>, ciphers: ?string, rejectUnauthorized: ?boolean}}
+ */
+https.ConnectOptions;
+
+/**
+ * @param {https.ConnectOptions|string} options
  * @param {function(http.ClientResponse)} callback
  * @return {http.ClientRequest}
  */
 https.request = function(options, callback) {};
 
 /**
- * @param {Object.<string,*>} options
+ * @param {https.ConnectOptions|string} options
  * @param {function(http.ClientResponse)} callback
  * @return {http.ClientRequest}
  */
@@ -66,7 +72,7 @@ https.get = function(options, callback) {};
 
 /**
  * @constructor
- * @extends events.EventEmitter
+ * @extends http.Agent
  */
 https.Agent = function() {};
 
@@ -74,5 +80,3 @@ https.Agent = function() {};
  * @type {https.Agent}
  */
 https.globalAgent;
-
-// TODO: Finish...

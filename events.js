@@ -17,6 +17,7 @@
 /**
  * @fileoverview Definitions for node's "events" module.
  * @see http://nodejs.org/api/events.html
+ * @see https://github.com/joyent/node/blob/master/lib/events.js
  * @externs
  * @author Daniel Wirtz <dcode@dcode.io>
  */
@@ -88,3 +89,16 @@ events.EventEmitter.prototype.listeners = function(event) {};
  * @return {boolean}
  */
 events.EventEmitter.prototype.emit = function(event, var_args) {};
+
+// Undocumented
+
+/**
+ * @type {boolean}
+ */
+events.usingDomains;
+
+/**
+ * @param {events.EventEmitter} emitter
+ * @param {string} type
+ */
+events.EventEmitter.listenerCount = function(emitter, type) {};

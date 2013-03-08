@@ -17,6 +17,7 @@
 /**
  * @fileoverview Definitions for node's domain module. Depends on the events module.
  * @see http://nodejs.org/api/domain.html
+ * @see https://github.com/joyent/node/blob/master/lib/domain.js
  * @externs
  * @author Daniel Wirtz <dcode@dcode.io>
  */
@@ -25,6 +26,11 @@
  * @type {Object.<string,*>}
  */
 var domain = {};
+
+/**
+ * @type {domain.Domain}
+ */
+domain.active;
 
 /**
  * @return {domain.Domain}
@@ -72,3 +78,13 @@ domain.Domain.prototype.intercept = function(callback) {};
 /**
  */
 domain.Domain.prototype.dispose = function() {};
+
+// Undocumented
+
+/**
+ */
+domain.Domain.prototype.enter = function() {};
+
+/**
+ */
+domain.Domain.prototype.exit = function() {};

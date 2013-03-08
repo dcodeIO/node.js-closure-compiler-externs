@@ -17,6 +17,7 @@
 /**
  * @fileoverview Definitions for node's child_process module. Depends on the events module.
  * @see http://nodejs.org/api/child_process.html
+ * @see https://github.com/joyent/node/blob/master/lib/child_process.js
  * @externs
  * @author Daniel Wirtz <dcode@dcode.io>
  */

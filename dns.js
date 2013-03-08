@@ -17,6 +17,7 @@
 /**
  * @fileoverview Definitions for node's dns module.
  * @see http://nodejs.org/api/dns.html
+ * @see https://github.com/joyent/node/blob/master/lib/dns.js
  * @externs
  * @author Daniel Wirtz <dcode@dcode.io>
  */
@@ -98,142 +99,142 @@ dns.reverse = function(ip, callback) {};
  * @type {string}
  * @const
  */
-dns.NODATA;
+dns.NODATA = 'ENODATA';
 
 /**
  * @type {string}
  * @const
  */
-dns.FORMERR;
+dns.FORMERR = 'EFORMERR';
 
 /**
  * @type {string}
  * @const
  */
-dns.SERVFAIL;
+dns.SERVFAIL = 'ESERVFAIL';
 
 /**
  * @type {string}
  * @const
  */
-dns.NOTFOUND;
+dns.NOTFOUND = 'ENOTFOUND';
 
 /**
  * @type {string}
  * @const
  */
-dns.NOTIMP;
+dns.NOTIMP = 'ENOTIMP';
 
 /**
  * @type {string}
  * @const
  */
-dns.REFUSED;
+dns.REFUSED = 'EREFUSED';
 
 /**
  * @type {string}
  * @const
  */
-dns.BADQUERY;
+dns.BADQUERY = 'EBADQUERY';
 
 /**
  * @type {string}
  * @const
  */
-dns.BADNAME;
+dns.BADNAME = 'EADNAME';
 
 /**
  * @type {string}
  * @const
  */
-dns.BADFAMILY;
+dns.BADFAMILY = 'EBADFAMILY';
 
 /**
  * @type {string}
  * @const
  */
-dns.BADRESP;
+dns.BADRESP = 'EBADRESP';
 
 /**
  * @type {string}
  * @const
  */
-dns.CONNREFUSED;
+dns.CONNREFUSED = 'ECONNREFUSED';
 
 /**
  * @type {string}
  * @const
  */
-dns.TIMEOUT;
+dns.TIMEOUT = 'ETIMEOUT';
 
 /**
  * @type {string}
  * @const
  */
-dns.EOF;
+dns.EOF = 'EOF';
 
 /**
  * @type {string}
  * @const
  */
-dns.FILE;
+dns.FILE = 'EFILE';
 
 /**
  * @type {string}
  * @const
  */
-dns.NOMEM;
+dns.NOMEM = 'ENOMEM';
 
 /**
  * @type {string}
  * @const
  */
-dns.DESTRUCTION;
+dns.DESTRUCTION = 'EDESTRUCTION';
 
 /**
  * @type {string}
  * @const
  */
-dns.BADSTR;
+dns.BADSTR = 'EBADSTR';
 
 /**
  * @type {string}
  * @const
  */
-dns.BADFLAGS;
+dns.BADFLAGS = 'EBADFLAGS';
 
 /**
  * @type {string}
  * @const
  */
-dns.NONAME;
+dns.NONAME = 'ENONAME';
 
 /**
  * @type {string}
  * @const
  */
-dns.BADHINTS;
+dns.BADHINTS = 'EBADHINTS';
 
 /**
  * @type {string}
  * @const
  */
-dns.NOTINITIALIZED;
+dns.NOTINITIALIZED = 'ENOTINITIALIZED';
 
 /**
  * @type {string}
  * @const
  */
-dns.LOADIPHLPAPI;
+dns.LOADIPHLPAPI = 'ELOADIPHLPAPI';
 
 /**
  * @type {string}
  * @const
  */
-dns.ADDRGETNETWORKPARAMS;
+dns.ADDRGETNETWORKPARAMS = 'EADDRGETNETWORKPARAMS';
 
 /**
  * @type {string}
  * @const
  */
-dns.CANCELLED;
+dns.CANCELLED = 'ECANCELLED';
