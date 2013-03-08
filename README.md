@@ -1,6 +1,7 @@
 node.js Closure Compiler externs [![Build Status](https://travis-ci.org/dcodeIO/node.js-closure-compiler-externs.png?branch=master)](https://travis-ci.org/dcodeIO/node.js-closure-compiler-externs)
 ================================
-A collection of node.js externs for use with [Closure Compiler](https://developers.google.com/closure/compiler/docs/overview).
+A collection of node.js externs for use with [Closure Compiler](https://developers.google.com/closure/compiler/docs/overview)
+/ [ClosureCompiler.js](https://github.com/dcodeIO/ClosureCompiler.js).
 
 See: [Advanced Compilation and Externs](https://developers.google.com/closure/compiler/docs/api-tutorial3) for details
 
