@@ -129,10 +129,12 @@ crypto.Cipher = function(cipher, password, options) {};
 crypto.Cipher.prototype.update = function(data, input_encoding, output_encoding) {};
 
 /**
+ * @name crypto.Cipher.prototype.final
+ * @function
  * @param {string} output_encoding
  * @return {string|buffer.Buffer}
  */
-crypto.Cipher.prototype.final = function(output_encoding) {};
+// crypto.Cipher.prototype.final = function(output_encoding) {};
 
 /**
  * @param {boolean=} auto_padding
@@ -181,10 +183,12 @@ crypto.Decipher = function(cipher, password, options) {}
 crypto.Decipher.prototype.update = function(data, input_encoding, output_encoding) {};
 
 /**
+ * @name crypto.Decipher.prototype.final
+ * @function
  * @param {string} output_encoding
  * @return {string|buffer.Buffer}
  */
-crypto.Decipher.prototype.final = function(output_encoding) {};
+// crypto.Decipher.prototype.final = function(output_encoding) {};
 
 /**
  * @param {boolean=} auto_padding
