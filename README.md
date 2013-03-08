@@ -45,6 +45,13 @@ Testing [![Build Status](https://travis-ci.org/dcodeIO/node.js-closure-compiler-
 Externs are automatically syntax-validated through a [ClosureCompiler.js](https://github.com/dcodeIO/ClosureCompiler.js)
 test run. This does not imply that the extern is complete or does actually represent the underlying API (but it should).
 
+Usage with ClosureCompiler.js
+-----------------------------
+[ClosureCompiler.js](https://github.com/dcodeIO/ClosureCompiler.js) depends on an npm distribution of this repository.
+As a result, specifiying `--externs=node` automatically includes all node.js specific externs in your compile step. If
+you are using non-core modules, you may still need [additional externs](https://github.com/dcodeIO/ClosureCompiler.js#externs-for-advanced_optimizations)
+for these.
+
 Downloads
 ---------
 * [ZIP-Archive](https://github.com/dcodeIO/node.js-closure-compiler-externs/archive/master.zip)
