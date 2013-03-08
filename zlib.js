@@ -42,7 +42,7 @@ zlib.Options;
 
 /**
  * @constructor
- * @extends events.EventEmitter
+ * @extends stream.WriteStream
  */
 zlib.Zlib = function() {};
 
