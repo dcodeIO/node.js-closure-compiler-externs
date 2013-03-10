@@ -241,4 +241,176 @@ crypto.Sign.prototype.sign = function(private_key, output_format) {};
  */
 crypto.Signer; // Not sure about API docs / source diff
 
-// TODO: Finish...
+/**
+ * @param {string} algorithm
+ * @return crypto.Verify
+ */
+crypto.createVerify = function(algorithm) {};
+
+/**
+ * @param {string} algorithm
+ * @param {Object} options
+ * @constructor
+ * @extend stream.Writable
+ */
+crypto.Verify = function(algorithm, options) {};
+
+/**
+ * @type {crypto.Sign._write}
+ */
+crypto.Verify.prototype._write;
+
+/**
+ * @param {string|buffer.Buffer} data
+ */
+crypto.Verify.prototype.update = function(data) {};
+
+/**
+ * @param {string} object
+ * @param {string|buffer.Buffer} signature
+ * @param {string=} signature_format
+ * @return {boolean}
+ */
+crypto.Verify.prototype.verify = function(object, signature, signature_format) {};
+
+/**
+ * @param {number} prime
+ * @param {string=} encoding
+ * @return {crypto.DiffieHellman}
+ */
+crypto.createDiffieHellman = function(prime, encoding) {};
+
+/**
+ * @param {number} sizeOrKey
+ * @param {string} encoding
+ * @constructor
+ */
+crypto.DiffieHellman = function(sizeOrKey, encoding) {};
+
+/**
+ * @param {string=} encoding
+ * @return {string|buffer.Buffer}
+ */
+crypto.DiffieHellman.prototype.generateKeys = function(encoding) {};
+
+/**
+ * @param {string|buffer.Buffer} key
+ * @param {string=} inEnc
+ * @param {string=} outEnc
+ * @return {string|buffer.Buffer}
+ */
+crypto.DiffieHellman.prototype.computeSecret = function(key, inEnc, outEnc) {};
+
+/**
+ * @param {string=} encoding
+ * @return {string|buffer.Buffer}
+ */
+crypto.DiffieHellman.prototype.getPrime = function(encoding) {};
+
+/**
+ * @param {string=} encoding
+ * @return {string|buffer.Buffer}
+ */
+crypto.DiffieHellman.prototype.getGenerator = function(encoding) {};
+
+/**
+ * @param {string=} encoding
+ * @return {string|buffer.Buffer}
+ */
+crypto.DiffieHellman.prototype.getPublicKey = function(encoding) {};
+
+/**
+ * @param {string} encoding
+ * @return {string|buffer.Buffer}
+ */
+crypto.DiffieHellman.prototype.getPrivateKey = function(encoding) {}
+
+/**
+ * @param {string|buffer.Buffer} key
+ * @param {string=} encoding
+ * @return {crypto.DiffieHellman}
+ */
+crypto.DiffieHellman.prototype.setPublicKey = function(key, encoding) {};
+
+/**
+ * @param {string|buffer.Buffer} key
+ * @param {string=} encoding
+ * @return {crypto.DiffieHellman}
+ */
+crypto.DiffieHellman.prototype.setPrivateKey = function(key, encoding) {};
+
+/**
+ * @param {string} name
+ * @constructor
+ */
+crypto.DiffieHellmanGroup = function(name) {};
+
+/**
+ * @type {crypto.DiffieHellman.prototype.generateKeys}
+ */
+crypto.DiffieHellmanGroup.prototype.generateKeys = crypto.DiffieHellman.prototype.generateKeys;
+
+/**
+ * @type {crypto.DiffieHellman.prototype.computeSecret}
+ */
+crypto.DiffieHellmanGroup.prototype.computeSecret = crypto.DiffieHellman.prototype.computeSecret;
+
+/**
+ * @type {crypto.DiffieHellman.prototype.getPrime}
+ */
+crypto.DiffieHellmanGroup.prototype.getPrime = crypto.DiffieHellman.prototype.getPrime;
+
+/**
+ * @type {crypto.DiffieHellman.prototype.getGenerator}
+ */
+crypto.DiffieHellmanGroup.prototype.getGenerator = crypto.DiffieHellman.prototype.getGenerator;
+
+/**
+ * @type {crypto.DiffieHellman.prototype.getPublicKey}
+ */
+crypto.DiffieHellmanGroup.prototype.getPublicKey = crypto.DiffieHellman.prototype.getPublicKey;
+
+/**
+ * @type {crypto.DiffieHellman.prototype.getPrivateKey}
+ */
+crypto.DiffieHellmanGroup.prototype.getPrivateKey = crypto.DiffieHellman.prototype.getPrivateKey;
+
+/**
+ * @type {crypto.DiffieHellman.prototype.setPublicKey}
+ */
+crypto.DiffieHellmanGroup.prototype.setPublicKey = crypto.DiffieHellman.prototype.setPublicKey;
+
+/**
+ * @type {crypto.DiffieHellman.prototype.setPrivateKey}
+ */
+crypto.DiffieHellmanGroup.prototype.setPrivateKey = crypto.DiffieHellman.prototype.setPrivateKey;
+
+/**
+ * @type {*}
+ */
+crypto.randomBytes;
+
+/**
+ * @type {*}
+ */
+crypto.pseudoRandomBytes;
+
+/**
+ * @type {crypto.randomBytes}
+ */
+crypto.rng = crypto.randomBytes;
+
+/**
+ * @type {crypto.pseudoRandomBytes}
+ */
+crypto.prng = crypto.pseudoRandomBytes;
+
+/**
+ * @return {Array.<string>}
+ */
+crypto.getCiphers = function() {};
+
+/**
+ * @return {Array.<string>}
+ */
+crypto.getHashes = function() {};
