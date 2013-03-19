@@ -319,6 +319,7 @@ ProtoBuf.Reflect.Message.prototype.build = function() {};
 /**
  * @param {!ProtoBuf.Builder.Message} message
  * @param {!ByteBuffer} buffer
+ * @return {!ByteBuffer}
  * @throws {string}
  */
 ProtoBuf.Reflect.Message.prototype.encode = function(message, buffer) {};
@@ -380,6 +381,7 @@ ProtoBuf.Reflect.Message.Field.prototype.verifyValue = function(value, skipRepea
 /**
  * @param {*} value
  * @param {!ByteBuffer} buffer
+ * @return {!ByteBuffer}
  * @throws {Error}
  * @nosideeffects
  */
@@ -397,6 +399,7 @@ ProtoBuf.Reflect.Message.Field.prototype.decode = function(wireType, buffer) {};
 /**
  * @param {*} value
  * @param {!ByteBuffer} buffer
+ * @return {!ByteBuffer}
  * @throws {Error}
  * @nosideeffects
  */
@@ -571,18 +574,20 @@ ProtoBuf.Builder.Message.prototype.toString = function() {};
 
 /**
  * @param {string} proto
+ * @param {ProtoBuf.Builder=} builder
  * @return {!ProtoBuf.Builder}
  * @throws {Error}
  */
-ProtoBuf.protoFromString = function(proto) {};
+ProtoBuf.protoFromString = function(proto, builder) {};
 
 /**
  * @param {string} filename
- * @param {function(ProtoBuf.Builder)=} callback 
+ * @param {(function(ProtoBuf.Builder)|ProtoBuf.Builder)=} callback
+ * @param {ProtoBuf.Builder=} builder
  * @return {ProtoBuf.Builder|undefined}
  * @throws {Error}
  */
-ProtoBuf.protoFromFile = function(filename, callback) {};
+ProtoBuf.protoFromFile = function(filename, callback, builder) {};
 
 /**
  * @param {string=} pkg

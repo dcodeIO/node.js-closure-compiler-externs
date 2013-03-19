@@ -46,6 +46,11 @@ ByteBuffer.prototype.offset;
 /**
  * @type {number}
  */
+ByteBuffer.prototype.markedOffset;
+
+/**
+ * @type {number}
+ */
 ByteBuffer.prototype.length;
 
 /**
@@ -71,6 +76,60 @@ ByteBuffer.LITTLE_ENDIAN = true;
  */
 ByteBuffer.BIG_ENDIAN = false;
 
+/**
+ * @type {Int8Array}
+ * @const
+ */
+ByteBuffer.INT8;
+
+/**
+ * @type {Uint8Array}
+ * @const
+ */
+ByteBuffer.UINT8;
+
+/**
+ * @type {Int16Array}
+ * @const
+ */
+ByteBuffer.INT16;
+
+/**
+ * @type {Uint16Array}
+ * @const
+ */
+ByteBuffer.UINT16;
+
+/**
+ * @type {Int32Array}
+ * @const
+ */
+ByteBuffer.INT32;
+
+/**
+ * @type {Uint32Array}
+ * @const
+ */
+ByteBuffer.UINT32;
+
+/**
+ * @type {Float32Array}
+ * @const
+ */
+ByteBuffer.FLOAT32;
+
+/**
+ * @type {Float64Array}
+ * @const
+ */
+ByteBuffer.FLOAT64;
+
+/**
+ * @param {Uint8Array|Int8Array|Uint16Array|Int16Array|Uint32Array|Int32Array|Float32Array|Float64Array} type
+ * @param {number} value
+ * @return {number}
+ */
+ByteBuffer.cast = function(type, value) {};
 
 /**
  * @param {number=} capacity
@@ -133,6 +192,13 @@ ByteBuffer.prototype.ensureCapacity = function(capacity) {};
  * @return {!ByteBuffer}
  */
 ByteBuffer.prototype.flip = function() {};
+
+/**
+ * @param {number=} offset
+ * @return {!ByteBuffer}
+ * @throws {Error}
+ */
+ByteBuffer.prototype.mark = function(offset) {};
 
 /**
  * @return {!ByteBuffer} this
@@ -323,6 +389,34 @@ ByteBuffer.prototype.writeUint32 = function(value, offset) {};
 ByteBuffer.prototype.readUint32 = function(offset) {};
 
 /**
+ * @param {number|Long} value
+ * @param {number=} offset
+ * @return {!ByteBuffer}
+ */
+ByteBuffer.prototype.writeInt64 = function(value, offset) {};
+
+/**
+ * @param {number=} offset
+ * @return {Long}
+ * @throws {Error}
+ */
+ByteBuffer.prototype.readInt64 = function(offset) {};
+
+/**
+ * @param {number|Long} value
+ * @param {number=} offset
+ * @return {!ByteBuffer}
+ */
+ByteBuffer.prototype.writeUint64 = function(value, offset) {};
+
+/**
+ * @param {number=} offset
+ * @return {Long}
+ * @throws {Error}
+ */
+ByteBuffer.prototype.readUint64 = function(offset) {};
+
+/**
  * @param {number} value
  * @param {number=} offset
  * @return {!ByteBuffer}
@@ -415,10 +509,40 @@ ByteBuffer.prototype.writeZigZagVarint32 = function(value, offset) {};
 
 /**
  * @param {number=} offset
- * @return {number|!{value: number, length: number}}
+ * @return {number|{value: number, length: number}}
  * @throws {Error}
  */
 ByteBuffer.prototype.readZigZagVarint32 = function(offset) {};
+
+/**
+ * @param {number|Long} value
+ * @param {number=} offset
+ * @return {!ByteBuffer|number}
+ * @throws {Error}
+ */
+ByteBuffer.prototype.writeVarint64 = function(value, offset) {};
+
+/**
+ * @param {number=} offset
+ * @return {!Long|{value: !Long, length: number}}
+ * @throws {Error}
+ */
+ByteBuffer.prototype.readVarint64 = function(offset) {};
+
+/**
+ * @param {number|Long} value
+ * @param {number=} offset
+ * @return {!ByteBuffer|number}
+ * @throws {Error}
+ */
+ByteBuffer.prototype.writeZigZagVarint64 = function(value, offset) {};
+
+/**
+ * @param {number=} offset
+ * @return {!Long|!{value: !Long, length: number}}
+ * @throws {Error}
+ */
+ByteBuffer.prototype.readZigZagVarint64 = function(offset) {};
 
 /**
  * @param {number} value
@@ -436,10 +560,33 @@ ByteBuffer.prototype.readVarint = function(offset) {};
 
 /**
  * @param {number} value
+ * @param {number=} offset
+ * @return {!ByteBuffer|number}
+ */
+ByteBuffer.prototype.writeZigZagVarint = function(value, offset) {};
+
+/**
+ * @param {number=} offset
+ * @return {number|{value: number, length: number}}
+ * @throws {Error}
+ */
+ByteBuffer.prototype.readZigZagVarint = function(offset) {};
+
+/**
+ * @param {number} value
  * @return {number}
+ * @throws {Error}
  * @nosideeffects
  */
 ByteBuffer.calculateVarint32 = function(value) {};
+
+/**
+ * @param {number} value
+ * @return {number}
+ * @throws {Error}
+ * @nosideeffects
+ */
+ByteBuffer.calculateVarint64 = function(value) {};
 
 /**
  * @param {string} str
@@ -607,3 +754,9 @@ ByteBuffer.zigZagDecode32 = function(n) {};
  * @const
  */
 ByteBuffer.MAX_VARINT32_BYTES = 5;
+
+/**
+ * @type {number}
+ * @const
+ */
+ByteBuffer.MAX_VARINT64_BYTES = 10;

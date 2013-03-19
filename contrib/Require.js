@@ -42,7 +42,7 @@ define.amd;
 function requirejs(deps, callback, errback, optional) {}
 
 /**
- * @typedef {{nodeRequire: boolean, paths: Object.<string,string>, shim: Object.<string,string>}}
+ * @typedef {{nodeRequire: boolean=, baseUrl: string, paths: Object.<string,string>, shim: Object.<string,string>}}
  */
 var RequireConfig;
 
