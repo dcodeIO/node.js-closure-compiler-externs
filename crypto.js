@@ -256,7 +256,7 @@ crypto.createVerify = function(algorithm) {};
  * @param {string} algorithm
  * @param {Object} options
  * @constructor
- * @extend stream.Writable
+ * @extends stream.Writable
  */
 crypto.Verify = function(algorithm, options) {};
 
