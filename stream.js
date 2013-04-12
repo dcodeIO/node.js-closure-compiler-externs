@@ -226,7 +226,7 @@ stream.Transform = function(options) {};
 /**
  * @param {string|buffer.Buffer} chunk
  * @param {*} output
- * @param {function} cb
+ * @param {function(*=)} cb
  */
 stream.Transform._transform = function(chunk, output, cb) {};
 

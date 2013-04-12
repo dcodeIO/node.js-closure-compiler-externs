@@ -147,7 +147,7 @@ process.platform;
 process.memoryUsage = function() {};
 
 /**
- * @param {!function} callback
+ * @param {!function()} callback
  */
 process.nextTick = function(callback) {};
 

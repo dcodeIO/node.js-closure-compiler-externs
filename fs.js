@@ -459,7 +459,7 @@ fs.watchFile = function(filename, options, listener) {};
 
 /**
  * @param {string} filename
- * @param {function=} listener
+ * @param {function(string, string)=} listener
  */
 fs.unwatchFile = function(filename, listener) {};
 

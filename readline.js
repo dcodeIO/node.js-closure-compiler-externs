@@ -33,7 +33,7 @@
 var readline = {};
 
 /**
- * @param {{input: stream.ReadableStream, output: stream.WritableStream, completer: function(string, function=), terminal: boolean}} options
+ * @param {{input: stream.ReadableStream, output: stream.WritableStream, completer: function(string, function(*, Array)=), terminal: boolean}} options
  * @return {readline.Interface}
  */
 readline.createInterface = function(options) {};

@@ -41,7 +41,7 @@ https.Server = function() {};
 https.Server.prototype.listen = function(var_args) {};
 
 /**
- * @param {function} callback
+ * @param {function()=} callback
  */
 https.Server.prototype.close = function(callback) {};
 

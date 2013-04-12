@@ -22,7 +22,7 @@
  */
 
 /**
- * @type {Object.<string,function>}
+ * @type {Object.<string,function(*, ...[*])>}
  */
 var console = {};
 
