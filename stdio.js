@@ -15,14 +15,14 @@
  */
 
 /**
- * @fileoverfiew Definitions for node's stdio module. Depends on the assert module.
+ * @fileoverview Definitions for node's stdio module. Depends on the assert module.
  * @see http://nodejs.org/api/stdio.html
  * @externs
  * @author Daniel Wirtz <dcode@dcode.io>
  */
 
 /**
- * @type {Object.<string,function>}
+ * @type {Object.<string,function(*, ...[*])>}
  */
 var console = {};
 

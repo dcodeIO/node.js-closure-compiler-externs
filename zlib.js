@@ -15,7 +15,7 @@
  */
 
 /**
- * @fileoverfiew Definitions for node's zlib module. Depends on the events and buffer modules.
+ * @fileoverview Definitions for node's zlib module. Depends on the events and buffer modules.
  * @see http://nodejs.org/api/zlib.html
  * @see https://github.com/joyent/node/blob/master/lib/zlib.js
  * @externs

@@ -114,7 +114,7 @@ assert.notStrictEqual = function(actual, expected, message) {};
 /**
  * @name assert.throws
  * @function
- * @param {function} block
+ * @param {function()} block
  * @param {Function|RegExp|function(*)} error
  * @param {string=} message
  * @throws {assert.AssertionError}
@@ -123,7 +123,7 @@ assert.notStrictEqual = function(actual, expected, message) {};
 // assert.throws = function(block, error, message) {};
 
 /**
- * @param {function} block
+ * @param {function()} block
  * @param {Function|RegExp|function(*)} error
  * @param {string=} message
  * @throws {assert.AssertionError}

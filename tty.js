@@ -15,7 +15,7 @@
  */
 
 /**
- * @fileoverfiew Definitions for node's tty module. Depends on the net module.
+ * @fileoverview Definitions for node's tty module. Depends on the net module.
  * @see http://nodejs.org/api/tty.html
  * @see https://github.com/joyent/node/blob/master/lib/tty.js
  * @externs

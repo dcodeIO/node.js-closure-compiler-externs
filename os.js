@@ -15,7 +15,7 @@
  */
 
 /**
- * @fileoverfiew Definitions for node's os module.
+ * @fileoverview Definitions for node's os module.
  * @see http://nodejs.org/api/os.html
  * @externs
  * @author Daniel Wirtz <dcode@dcode.io>

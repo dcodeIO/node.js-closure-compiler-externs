@@ -226,7 +226,7 @@ fs.readlinkSync = function(path) {};
 
 /**
  * @param {string} path
- * @param {object.<string,string>=|function(string, string)=} cache
+ * @param {object.<string,string>|function(string, string)=} cache
  * @param {function(string, string)=} callback
  * @nosideeffects
  */
@@ -407,7 +407,7 @@ fs.readSync = function(fd, buffer, offset, length, position) {};
 
 /**
  * @param {string} filename
- * @param {string=|function(string, *)=}encoding
+ * @param {string|function(string, *)=}encoding
  * @param {function(string, *)=} callback
  * @nosideeffects
  */
@@ -423,7 +423,7 @@ fs.readFileSync = function(filename, encoding) {};
 /**
  * @param {string} filename
  * @param {*} data
- * @param {string=|function(string)=} encoding
+ * @param {string|function(string)=} encoding
  * @param {function(string)=} callback
  */
 fs.writeFile = function(filename, data, encoding, callback) {};
@@ -438,7 +438,7 @@ fs.writeFileSync = function(filename, data, encoding) {};
 /**
  * @param {string} filename
  * @param {*} data
- * @param {string=|function(string)=} encoding
+ * @param {string|function(string)=} encoding
  * @param {function(string)=} callback
  */
 fs.appendFile = function(filename, data, encoding, callback) {};
@@ -446,27 +446,27 @@ fs.appendFile = function(filename, data, encoding, callback) {};
 /**
  * @param {string} filename
  * @param {*} data
- * @param {string=|function(string)=} encoding
+ * @param {string|function(string)=} encoding
  */
 fs.appendFileSync = function(filename, data, encoding) {};
 
 /**
  * @param {string} filename
- * @param {{persistent: boolean, interval: number}=|function(*,*)} options
+ * @param {{persistent: boolean, interval: number}|function(*,*)=} options
  * @param {function(*,*)=} listener
  */
 fs.watchFile = function(filename, options, listener) {};
 
 /**
  * @param {string} filename
- * @param {function=} listener
+ * @param {function(string, string)=} listener
  */
 fs.unwatchFile = function(filename, listener) {};
 
 /**
  * 
  * @param {string} filename
- * @param {{persistent: boolean}=|function(string, string)} options
+ * @param {{persistent: boolean}|function(string, string)=} options
  * @param {function(string, string)=} listener
  * @return {fs.FSWatcher}
  */

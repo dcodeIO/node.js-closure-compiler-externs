@@ -15,7 +15,7 @@
  */
 
 /**
- * @fileoverfiew Definitions for node's stream module. Depends on the events module.
+ * @fileoverview Definitions for node's stream module. Depends on the events module.
  * @see http://nodejs.org/api/stream.html
  * @see https://github.com/joyent/node/blob/master/lib/stream.js
  * @externs
@@ -206,7 +206,7 @@ stream.Writable.prototype.end = function(chunk, encoding, cb) {};
  * @constructor
  * @param {Object=} options
  * @extends stream.Readable
- * @extends stream.Writable
+ * @implements stream.Writable
  */
 stream.Duplex = function(options) {};
 
@@ -226,7 +226,7 @@ stream.Transform = function(options) {};
 /**
  * @param {string|buffer.Buffer} chunk
  * @param {*} output
- * @param {function} cb
+ * @param {function(*=)} cb
  */
 stream.Transform._transform = function(chunk, output, cb) {};
 

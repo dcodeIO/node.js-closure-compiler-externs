@@ -84,9 +84,9 @@ buffer.Buffer.prototype.set = function(offset, v) {};
 
 /**
  * @param {string} string
- * @param {number=|string=} offset
- * @param {number=|string=} length
- * @param {number=|string=} encoding
+ * @param {number|string=} offset
+ * @param {number|string=} length
+ * @param {number|string=} encoding
  * @return {*}
  */
 buffer.Buffer.prototype.write = function(string, offset, length, encoding) {};
@@ -358,8 +358,8 @@ buffer.SlowBuffer = function(size) {};
  * 
  * @param {string} string
  * @param {number|string} offset
- * @param {number=|string=} length
- * @param {number=|string=} encoding
+ * @param {number|string=} length
+ * @param {number|string=} encoding
  * @return {*}
  */
 buffer.SlowBuffer.prototype.write = function(string, offset, length, encoding) {};

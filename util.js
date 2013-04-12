@@ -15,7 +15,7 @@
  */
 
 /**
- * @fileoverfiew Definitions for node's util module. Depends on the stream module.
+ * @fileoverview Definitions for node's util module. Depends on the stream module.
  * @see http://nodejs.org/api/util.html
  * @see https://github.com/joyent/node/blob/master/lib/util.js
  * @externs

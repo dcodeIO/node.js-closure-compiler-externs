@@ -15,7 +15,7 @@
  */
 
 /**
- * @fileoverfiew Definitions for node's crypto module. Depends on the buffer module.
+ * @fileoverview Definitions for node's crypto module. Depends on the buffer module.
  * @see http://nodejs.org/api/crypto.html
  * @see https://github.com/joyent/node/blob/master/lib/crypto.js
  * @externs
@@ -39,7 +39,7 @@ var crypto = {};
 crypto.DEFAULT_ENCODING;
 
 /**
- * @typedef {{pfx: string|buffer.Buffer, key: string|buffer.Buffer, passphrase: string, cert: string|buffer.Buffer, ca: Array.<string|buffer.Buffer>, crl: string|Array.<string>, ciphers: string}}
+ * @typedef {{pfx: (string|buffer.Buffer), key: (string|buffer.Buffer), passphrase: string, cert: (string|buffer.Buffer), ca: Array.<string|buffer.Buffer>, crl: (string|Array.<string>), ciphers: string}}
  */
 crypto.Credentials;
 
@@ -256,7 +256,7 @@ crypto.createVerify = function(algorithm) {};
  * @param {string} algorithm
  * @param {Object} options
  * @constructor
- * @extend stream.Writable
+ * @extends stream.Writable
  */
 crypto.Verify = function(algorithm, options) {};
 
