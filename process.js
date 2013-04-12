@@ -43,7 +43,7 @@ process.stdout;
 process.stderr;
 
 /**
- * @type {array,<string>}
+ * @type {array.<string>}
  */
 process.argv;
 
@@ -141,7 +141,7 @@ process.arch;
 process.platform;
 
 /**
- * @return {object.<string,number}
+ * @return {object.<string,number>}
  * @nosideeffects
  */
 process.memoryUsage = function() {};
