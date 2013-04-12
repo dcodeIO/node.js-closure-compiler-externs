@@ -15,7 +15,7 @@
  */
 
 /**
- * @fileoverfiew Definitions for node's url module.
+ * @fileoverview Definitions for node's url module.
  * @see http://nodejs.org/api/url.html
  * @see https://github.com/joyent/node/blob/master/lib/url.js
  * @externs

@@ -15,7 +15,7 @@
  */
 
 /**
- * @fileoverfiew Definitions for node's vm module.
+ * @fileoverview Definitions for node's vm module.
  * @see http://nodejs.org/api/vm.html
  * @see https://github.com/joyent/node/blob/master/lib/vm.js
  * @externs

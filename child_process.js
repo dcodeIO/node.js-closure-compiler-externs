@@ -76,7 +76,7 @@ child_process.ChildProcess.prototype.send = function(message, sendHandle) {};
 child_process.ChildProcess.prototype.disconnect = function() {};
 
 /**
- * @typedef {{cwd: string, stdio: Array|string, customFds: Array, env: Object.<string,*>, detached: boolean, uid: number, gid: number, encoding: string, timeout: number, maxBuffer: number, killSignal: string}}
+ * @typedef {{cwd: string, stdio: (Array|string), customFds: Array, env: Object.<string,*>, detached: boolean, uid: number, gid: number, encoding: string, timeout: number, maxBuffer: number, killSignal: string}}
  */
 child_process.Options;
 
@@ -90,7 +90,7 @@ child_process.ChildProcess.spawn = function(command, args, options) {};
 
 /**
  * @param {string} command
- * @param {child_process.Options=|function(Error, Buffer, Buffer)=} options
+ * @param {child_process.Options|function(Error, Buffer, Buffer)=} options
  * @param {function(Error, Buffer, Buffer)=} callback
  * @return {child_process.ChildProcess}
  */

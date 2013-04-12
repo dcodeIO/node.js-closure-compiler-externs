@@ -15,7 +15,7 @@
  */
 
 /**
- * @fileoverfiew Definitions for node's path module.
+ * @fileoverview Definitions for node's path module.
  * @see http://nodejs.org/api/path.html
  * @externs
  * @author Daniel Wirtz <dcode@dcode.io>

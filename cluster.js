@@ -65,7 +65,7 @@ cluster.setupMaster = function(settings) {};
 cluster.fork = function(env) {};
 
 /**
- * @param {function=} callback
+ * @param {function()=} callback
  */
 cluster.disconnect = function(callback) {};
 

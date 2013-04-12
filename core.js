@@ -68,7 +68,7 @@ var module = {};
 var exports;
 
 /**
- * @type {Object.<string.*>}
+ * @type {Object.<string,*>}
  */
 module.exports;
 
