@@ -266,7 +266,7 @@ JustMath.Vec2.prototype.norm = function() {};
 /**
  * @param {!JustMath.Vec2} b
  * @return {number}
- * @nosideffects
+ * @nosideeffects
  */
 JustMath.Vec2.prototype.distSq = function(b) {};
 

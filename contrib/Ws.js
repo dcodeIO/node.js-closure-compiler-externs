@@ -119,7 +119,7 @@ ws.WebSocket.prototype.resume = function() {};
 /**
  * @param {*} data
  * @param {object.<string,*>=} options
- * @param {function=} callback
+ * @param {function(...[*])=} callback
  */
 ws.WebSocket.prototype.send = function(data, options, callback) {};
 
@@ -134,26 +134,21 @@ ws.WebSocket.prototype.stream = function(options, callback) {};
 ws.WebSocket.prototype.terminate = function() {};
 
 /**
- * @type {?function}
+ * @type {?function()}
  */
 ws.WebSocket.prototype.onopen = function() {};
 
 /**
- * @type {?function(*)}
- * @param {*} error
+ * @type {?function(Error)}
  */
 ws.WebSocket.prototype.onerror = function(error) {};
 
 /**
  * @type {?function(number, string)}
- * @param {number} code
- * @param {string} message
  */
 ws.WebSocket.prototype.onclose = function(code, message) {};
 
 /**
  * @type {?function(*, object.<string,*>)}
- * @param {*} data
- * @param {object.<string,*>} flags
  */
 ws.WebSocket.prototype.onmessage = function(data, flags) {};

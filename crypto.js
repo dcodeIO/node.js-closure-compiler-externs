@@ -351,12 +351,12 @@ crypto.DiffieHellman.prototype.setPrivateKey = function(key, encoding) {};
 crypto.DiffieHellmanGroup = function(name) {};
 
 /**
- * @alias crypto.DiffieHellman.prototype.generateKeys
+ * TODO: Not sure if this works.
  */
 crypto.DiffieHellmanGroup.prototype.generateKeys = crypto.DiffieHellman.prototype.generateKeys;
 
 /**
- * @alias crypto.DiffieHellman.prototype.computeSecret
+ * TODO: Not sure if this works.
  */
 crypto.DiffieHellmanGroup.prototype.computeSecret = crypto.DiffieHellman.prototype.computeSecret;
 

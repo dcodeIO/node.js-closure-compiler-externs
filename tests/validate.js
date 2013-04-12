@@ -18,9 +18,30 @@
  * Validate Script: Tries to validate the existing externs by including them in a compile step.
  */
 
-var ClosureCompiler = require("closurecompiler");
+var ClosureCompiler = require("closurecompiler"),
+    fs = require("fs");
 
-ClosureCompiler.compile(__filename, {compilation_level: "ADVANCED_OPTIMIZATIONS", "externs": [".", "./contrib"]}, function(error, result) {
+var externs = [];
+var pattern = /\.js$/;
+var files = fs.readdirSync(".");
+for (var i=0; i<files.length; i++) {
+    if (pattern.test(files[i])) {
+        externs.push("./"+files[i]);
+    }
+}
+files = fs.readdirSync("./contrib");
+for (i=0; i<files.length; i++) {
+    if (pattern.test(files[i])) {
+        externs.push("./contrib/"+files[i]);
+    }
+}
+
+console.log("Validating "+externs.length+" files:\n", externs);
+ClosureCompiler.compile("./tests/noop.js", {
+	"compilation_level": "ADVANCED_OPTIMIZATIONS",
+	"warning_level": "verbose",
+	"externs": externs
+}, function(error, result) {
     if (error) {
         throw(error);
     }

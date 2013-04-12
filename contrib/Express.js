@@ -22,37 +22,37 @@
  */
 
 /**
- * @type {function(new:Application, ...)}
+ * @type {function(new:Application, ...[*])}
  */
 function express() {}
 
 /**
- * @type {@function(new:Application, ...}}
+ * @type {function(new:Application, ...[*])}
  */
 express.application = function() {};
 
 /**
- * @type {@function(new:ExpressRequest, ...)}
+ * @type {function(new:ExpressRequest, ...[*])}
  */
 express.request = function() {};
 
 /**
- * @type {@function(new:ExpressResponse, ...)}
+ * @type {function(new:ExpressResponse, ...[*])}
  */
 express.response = function() {};
 
 /**
- * @type {@function(new:ExpressRoute, ...})
+ * @type {function(new:ExpressRoute, ...[*])}
  */
 express.Route = function() {};
 
 /**
- * @type {@function(new:ExpressRouter, ...})
+ * @type {function(new:ExpressRouter, ...[*])}
  */
 express.Router = function() {};
 
 /**
- * @type {@function(...)}
+ * @type {?function(...[*])}
  */
 express.errorHandler = function() {};
 
