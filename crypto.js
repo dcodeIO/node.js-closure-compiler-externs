@@ -39,7 +39,7 @@ var crypto = {};
 crypto.DEFAULT_ENCODING;
 
 /**
- * @typedef {{pfx: string|buffer.Buffer, key: string|buffer.Buffer, passphrase: string, cert: string|buffer.Buffer, ca: Array.<string|buffer.Buffer>, crl: string|Array.<string>, ciphers: string}}
+ * @typedef {{pfx: (string|buffer.Buffer), key: (string|buffer.Buffer), passphrase: string, cert: (string|buffer.Buffer), ca: Array.<string|buffer.Buffer>, crl: (string|Array.<string>), ciphers: string}}
  */
 crypto.Credentials;
 
