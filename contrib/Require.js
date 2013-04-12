@@ -23,7 +23,7 @@
 
 /**
  * @param {string|Array.<string>|Function} name
- * @param {Array.<string>=|Function=} deps
+ * @param {Array.<string>|Function=} deps
  * @param {Function=} callback
  */
 function define(name, deps, callback) {}
@@ -35,7 +35,7 @@ define.amd;
 
 /**
  * @param {string|Array.<string>|Object.<string,*>} deps
- * @param {Function=|string|Array.<string>} callback
+ * @param {Function|string|Array.<string>=} callback
  * @param {Function=} errback
  * @param {Function=} optional
  */

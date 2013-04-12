@@ -90,7 +90,7 @@ child_process.ChildProcess.spawn = function(command, args, options) {};
 
 /**
  * @param {string} command
- * @param {child_process.Options=|function(Error, Buffer, Buffer)=} options
+ * @param {child_process.Options|function(Error, Buffer, Buffer)=} options
  * @param {function(Error, Buffer, Buffer)=} callback
  * @return {child_process.ChildProcess}
  */
