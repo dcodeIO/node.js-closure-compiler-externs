@@ -15,7 +15,7 @@
  */
 
 /**
- * @fileoverfiew Definitions for node's crypto module. Depends on the buffer module.
+ * @fileoverview Definitions for node's crypto module. Depends on the buffer module.
  * @see http://nodejs.org/api/crypto.html
  * @see https://github.com/joyent/node/blob/master/lib/crypto.js
  * @externs

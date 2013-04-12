@@ -15,7 +15,7 @@
  */
 
 /**
- * @fileoverfiew Definitions for node's stream module. Depends on the events module.
+ * @fileoverview Definitions for node's stream module. Depends on the events module.
  * @see http://nodejs.org/api/stream.html
  * @see https://github.com/joyent/node/blob/master/lib/stream.js
  * @externs

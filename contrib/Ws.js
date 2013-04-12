@@ -15,7 +15,7 @@
  */
 
 /**
- * @fileoverfiew Definitions for the ws module. Depends on the events module.
+ * @fileoverview Definitions for the ws module. Depends on the events module.
  * @see https://github.com/einaros/ws/blob/master/doc/ws.md
  * @externs
  * @author Daniel Wirtz <dcode@code.io>

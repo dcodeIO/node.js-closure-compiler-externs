@@ -15,7 +15,7 @@
  */
 
 /**
- * @fileoverfiew Definitions for node's tls module. Depends on the stream module.
+ * @fileoverview Definitions for node's tls module. Depends on the stream module.
  * @see http://nodejs.org/api/tls.html
  * @see https://github.com/joyent/node/blob/master/lib/tls.js
  * @externs
