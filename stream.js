@@ -206,7 +206,7 @@ stream.Writable.prototype.end = function(chunk, encoding, cb) {};
  * @constructor
  * @param {Object=} options
  * @extends stream.Readable
- * @extends stream.Writable
+ * @implements stream.Writable
  */
 stream.Duplex = function(options) {};
 
