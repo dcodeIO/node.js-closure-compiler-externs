@@ -320,8 +320,8 @@ fs.openSync = function(path, flags, mode) {};
 
 /**
  * @param {string} path
- * @param {number} atime
- * @param {number} mtime
+ * @param {number|Date} atime
+ * @param {number|Date} mtime
  * @param {function(...)=} callback
  * @nosideeffects
  */
@@ -329,16 +329,16 @@ fs.utimes = function(path, atime, mtime, callback) {};
 
 /**
  * @param {string} path
- * @param {number} atime
- * @param {number} mtime
+ * @param {number|Date} atime
+ * @param {number|Date} mtime
  * @nosideeffects
  */
 fs.utimesSync = function(path, atime, mtime) {};
 
 /**
  * @param {*} fd
- * @param {number} atime
- * @param {number} mtime
+ * @param {number|Date} atime
+ * @param {number|Date} mtime
  * @param {function(...)=} callback
  * @nosideeffects
  */
@@ -346,8 +346,8 @@ fs.futimes = function(fd, atime, mtime, callback) {};
 
 /**
  * @param {*} fd
- * @param {number} atime
- * @param {number} mtime
+ * @param {number|Date} atime
+ * @param {number|Date} mtime
  * @nosideeffects
  */
 fs.futimesSync = function(fd, atime, mtime) {};
