@@ -86,10 +86,11 @@ stream.WritableStream.prototype.writable;
 stream.WritableStream.prototype.write = function(buffer, encoding) {};
 
 /**
- * @param {string|buffer.Buffer} buffer
+ * @param {string|buffer.Buffer=} buffer
  * @param {string=} encoding
+ * @param {function(*=)=} cb
  */
-stream.WritableStream.prototype.end = function(buffer, encoding) {};
+stream.WritableStream.prototype.end = function(buffer, encoding, cb) {};
 
 /**
  */
