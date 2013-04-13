@@ -585,17 +585,17 @@ fs.Stats.prototype.blocks = 0;
 /**
  * @type {Date}
  */
-fs.Stats.prototype.atime = 0;
+fs.Stats.prototype.atime;
 
 /**
  * @type {Date}
  */
-fs.Stats.prototype.mtime = 0;
+fs.Stats.prototype.mtime;
 
 /**
  * @type {Date}
  */
-fs.Stats.prototype.ctime = 0;
+fs.Stats.prototype.ctime;
 
 /**
  * @param {string} path
