@@ -73,7 +73,7 @@ var exports;
 module.exports;
 
 /**
- * @type {require}
+ * @type {function(string)}
  */
 module.require;
 
