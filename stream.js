@@ -75,13 +75,13 @@ stream.WritableStream.prototype.drain = function() {};
 stream.WritableStream.prototype.writable;
 
 /**
- * @param {string|buffer} buffer
+ * @param {string|buffer.Buffer} buffer
  * @param {string=} encoding
  */
 stream.WritableStream.prototype.write = function(buffer, encoding) {};
 
 /**
- * @param {string|buffer} buffer
+ * @param {string|buffer.Buffer} buffer
  * @param {string=} encoding
  */
 stream.WritableStream.prototype.end = function(buffer, encoding) {};
@@ -109,7 +109,7 @@ stream.Readable = function(options) {};
 stream.Readable.prototype.readable;
 
 /**
- * @param {string|buffer.Buffe} chunk
+ * @param {string|buffer.Buffer} chunk
  * @return {boolean}
  */
 stream.Readable.prototype.push = function(chunk) {};

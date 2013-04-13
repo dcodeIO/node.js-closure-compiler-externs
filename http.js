@@ -159,7 +159,7 @@ http.ServerResponse.prototype.getHeader = function(name) {};
 http.ServerResponse.prototype.removeHeader = function(name) {};
 
 /**
- * @param {string|Array|Buffer} chunk
+ * @param {string|Array|buffer.Buffer} chunk
  * @param {string=} encoding
  */
 http.ServerResponse.prototype.write = function(chunk, encoding) {};
@@ -170,7 +170,7 @@ http.ServerResponse.prototype.write = function(chunk, encoding) {};
 http.ServerResponse.prototype.addTrailers = function(headers) {};
 
 /**
- * @param {(string|Array|Buffer)=} data
+ * @param {(string|Array|buffer.Buffer)=} data
  * @param {string=} encoding
  */
 http.ServerResponse.prototype.end = function(data, encoding) {};
@@ -183,13 +183,13 @@ http.ServerResponse.prototype.end = function(data, encoding) {};
 http.ClientRequest = function() {};
 
 /**
- * @param {string|Array|Buffer} chunk
+ * @param {string|Array|buffer.Buffer} chunk
  * @param {string=} encoding
  */
 http.ClientRequest.prototype.write = function(chunk, encoding) {};
 
 /**
- * @param {(string|Array|Buffer)=} data
+ * @param {(string|Array|buffer.Buffer)=} data
  * @param {string=} encoding
  */
 http.ClientRequest.prototype.end = function(data, encoding) {};
