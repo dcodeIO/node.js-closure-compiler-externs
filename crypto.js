@@ -57,7 +57,7 @@ crypto.createHash = function(algorithm) {};
 
 /**
  * @param {string} algorithm
- * @param {Object} options
+ * @param {Object=} options
  * @constructor
  * @extends stream.Transform
  */
@@ -85,7 +85,7 @@ crypto.createHmac = function(algorithm, key) {};
 /**
  * @param {string} hmac
  * @param {string|buffer.Buffer} key
- * @param {Object} options
+ * @param {Object=} options
  * @constructor
  * @extends stream.Transform
  */
@@ -112,14 +112,14 @@ crypto.createCipher = function(algorithm, password) {};
  * @param {string} algorithm
  * @param {string|buffer.Buffer} key
  * @param {string|buffer.Buffer} iv
- * @return {crypto.Cipher}
+ * @return {crypto.Cipheriv}
  */
 crypto.createCipheriv = function(algorithm, key, iv) {};
 
 /**
  * @param {string|buffer.Buffer} cipher
  * @param {string} password
- * @param {Object} options
+ * @param {Object=} options
  * @constructor
  * @extends stream.Transform
  */
@@ -135,11 +135,10 @@ crypto.Cipher.prototype.update = function(data, input_encoding, output_encoding)
 
 /**
  * @name crypto.Cipher.prototype.final
- * @function
  * @param {string} output_encoding
  * @return {string|buffer.Buffer}
  */
-// crypto.Cipher.prototype.final = function(output_encoding) {};
+crypto.Cipher.prototype['final'] = function(output_encoding) {};
 
 /**
  * @param {boolean=} auto_padding
@@ -147,13 +146,36 @@ crypto.Cipher.prototype.update = function(data, input_encoding, output_encoding)
 crypto.Cipher.prototype.setAutoPadding = function(auto_padding) {};
 
 /**
- * @param {string|crypto.Cipheriv} cipher
+ * Note:  Cipheriv mixes update, final, and setAutoPadding from Cipher but
+ * doesn't inherit directly from Cipher.
+ *
+ * @param {string} cipher
  * @param {string|buffer.Buffer} key
  * @param {string|buffer.Buffer} iv
  * @constructor
- * @extends crypto.Cipher
+ * @extends stream.Transform
  */
 crypto.Cipheriv = function(cipher, key, iv) {};
+
+/**
+ * @param {string|buffer.Buffer} data
+ * @param {string=} input_encoding
+ * @param {string=} output_encoding
+ * @return {string|buffer.Buffer}
+ */
+crypto.Cipheriv.prototype.update = function(data, input_encoding, output_encoding) {};
+
+/**
+ * @name crypto.Cipheriv.prototype.final
+ * @param {string} output_encoding
+ * @return {string|buffer.Buffer}
+ */
+crypto.Cipheriv.prototype['final'] = function(output_encoding) {};
+
+/**
+ * @param {boolean=} auto_padding
+ */
+crypto.Cipheriv.prototype.setAutoPadding = function(auto_padding) {};
 
 /**
  * @param {string} algorithm
@@ -166,14 +188,17 @@ crypto.createDecipher = function(algorithm, password) {};
  * @param {string} algorithm
  * @param {string|buffer.Buffer} key
  * @param {string|buffer.Buffer} iv
- * @return {crypto.Decipher}
+ * @return {crypto.Decipheriv}
  */
 crypto.createDecipheriv = function(algorithm, key, iv) {};
 
 /**
- * @param {string|buffer.Buffer|crypto.Decipher} cipher
+ * Note:  Decipher mixes update, final, and setAutoPadding from Cipher but
+ * doesn't inherit directly from Cipher.
+ *
+ * @param {string|buffer.Buffer} cipher
  * @param {string|buffer.Buffer} password
- * @param {Object} options
+ * @param {Object=} options
  * @constructor
  * @extends stream.Transform
  */
@@ -189,11 +214,16 @@ crypto.Decipher.prototype.update = function(data, input_encoding, output_encodin
 
 /**
  * @name crypto.Decipher.prototype.final
- * @function
  * @param {string} output_encoding
  * @return {string|buffer.Buffer}
  */
-// crypto.Decipher.prototype.final = function(output_encoding) {};
+crypto.Decipher.prototype['final'] = function(output_encoding) {};
+
+/**
+ * @param {string} output_encoding
+ * @return {string|buffer.Buffer}
+ */
+crypto.Decipher.prototype.finaltol = function(output_encoding) {};
 
 /**
  * @param {boolean=} auto_padding
@@ -201,29 +231,53 @@ crypto.Decipher.prototype.update = function(data, input_encoding, output_encodin
 crypto.Decipher.prototype.setAutoPadding = function(auto_padding) {};
 
 /**
+ * Note:  Decipheriv mixes update, final, and setAutoPadding from Cipher but
+ * doesn't inherit directly from Cipher.
+ *
  * @param {string|buffer.Buffer|crypto.Decipheriv} cipher
  * @param {string|buffer.Buffer} key
  * @param {string|buffer.Buffer} iv
- * @param {Object} options
+ * @param {Object=} options
  * @constructor
- * @extends crypto.Cipher
+ * @extends stream.Transform
  */
 crypto.Decipheriv = function(cipher, key, iv, options) {};
 
 /**
- * @type {crypto.Cipher.prototype.final}
+ * @param {string|buffer.Buffer} data
+ * @param {string=} input_encoding
+ * @param {string=} output_encoding
+ * @return {string|buffer.Buffer}
  */
-crypto.Decipheriv.prototype.finaltol;
+crypto.Decipheriv.prototype.update = function(data, input_encoding, output_encoding) {};
+
+/**
+ * @name crypto.Decipheriv.prototype.final
+ * @param {string} output_encoding
+ * @return {string|buffer.Buffer}
+ */
+crypto.Decipheriv.prototype['final'] = function(output_encoding) {};
+
+/**
+ * @param {string} output_encoding
+ * @return {string|buffer.Buffer}
+ */
+crypto.Decipheriv.prototype.finaltol = function(output_encoding) {};
+
+/**
+ * @param {boolean=} auto_padding
+ */
+crypto.Decipheriv.prototype.setAutoPadding = function(auto_padding) {};
 
 /**
  * @param {string} algorithm
- * @return {crypto.Signer}
+ * @return {crypto.Sign}
  */
 crypto.createSign = function(algorithm) {};
 
 /**
  * @param {string} algorithm
- * @param {Object} options
+ * @param {Object=} options
  * @constructor
  * @extends stream.Writable
  */
@@ -242,11 +296,6 @@ crypto.Sign.prototype.update = function(data) {};
 crypto.Sign.prototype.sign = function(private_key, output_format) {};
 
 /**
- * @type {crypto.Sign}
- */
-crypto.Signer; // Not sure about API docs / source diff
-
-/**
  * @param {string} algorithm
  * @return crypto.Verify
  */
@@ -254,16 +303,11 @@ crypto.createVerify = function(algorithm) {};
 
 /**
  * @param {string} algorithm
- * @param {Object} options
+ * @param {Object=} options
  * @constructor
  * @extends stream.Writable
  */
 crypto.Verify = function(algorithm, options) {};
-
-/**
- * @type {crypto.Sign._write}
- */
-crypto.Verify.prototype._write;
 
 /**
  * @param {string|buffer.Buffer} data
@@ -287,7 +331,7 @@ crypto.createDiffieHellman = function(prime, encoding) {};
 
 /**
  * @param {number} sizeOrKey
- * @param {string} encoding
+ * @param {string=} encoding
  * @constructor
  */
 crypto.DiffieHellman = function(sizeOrKey, encoding) {};
@@ -345,70 +389,111 @@ crypto.DiffieHellman.prototype.setPublicKey = function(key, encoding) {};
 crypto.DiffieHellman.prototype.setPrivateKey = function(key, encoding) {};
 
 /**
+ * Note:  DiffieHellmanGroup mixes DiffieHellman but doesn't inherit directly.
+ *
  * @param {string} name
  * @constructor
  */
 crypto.DiffieHellmanGroup = function(name) {};
 
 /**
- * TODO: Not sure if this works.
+ * @param {string=} encoding
+ * @return {string|buffer.Buffer}
  */
-crypto.DiffieHellmanGroup.prototype.generateKeys = crypto.DiffieHellman.prototype.generateKeys;
+crypto.DiffieHellmanGroup.prototype.generateKeys = function(encoding) {};
 
 /**
- * TODO: Not sure if this works.
+ * @param {string|buffer.Buffer} key
+ * @param {string=} inEnc
+ * @param {string=} outEnc
+ * @return {string|buffer.Buffer}
  */
-crypto.DiffieHellmanGroup.prototype.computeSecret = crypto.DiffieHellman.prototype.computeSecret;
+crypto.DiffieHellmanGroup.prototype.computeSecret = function(key, inEnc, outEnc) {};
 
 /**
- * @type {crypto.DiffieHellman.prototype.getPrime}
+ * @param {string=} encoding
+ * @return {string|buffer.Buffer}
  */
-crypto.DiffieHellmanGroup.prototype.getPrime = crypto.DiffieHellman.prototype.getPrime;
+crypto.DiffieHellmanGroup.prototype.getPrime = function(encoding) {};
 
 /**
- * @type {crypto.DiffieHellman.prototype.getGenerator}
+ * @param {string=} encoding
+ * @return {string|buffer.Buffer}
  */
-crypto.DiffieHellmanGroup.prototype.getGenerator = crypto.DiffieHellman.prototype.getGenerator;
+crypto.DiffieHellmanGroup.prototype.getGenerator = function(encoding) {};
 
 /**
- * @type {crypto.DiffieHellman.prototype.getPublicKey}
+ * @param {string=} encoding
+ * @return {string|buffer.Buffer}
  */
-crypto.DiffieHellmanGroup.prototype.getPublicKey = crypto.DiffieHellman.prototype.getPublicKey;
+crypto.DiffieHellmanGroup.prototype.getPublicKey = function(encoding) {};
 
 /**
- * @type {crypto.DiffieHellman.prototype.getPrivateKey}
+ * @param {string} encoding
+ * @return {string|buffer.Buffer}
  */
-crypto.DiffieHellmanGroup.prototype.getPrivateKey = crypto.DiffieHellman.prototype.getPrivateKey;
+crypto.DiffieHellmanGroup.prototype.getPrivateKey = function(encoding) {}
 
 /**
- * @type {crypto.DiffieHellman.prototype.setPublicKey}
+ * @param {string|buffer.Buffer} key
+ * @param {string=} encoding
+ * @return {crypto.DiffieHellmanGroup}
  */
-crypto.DiffieHellmanGroup.prototype.setPublicKey = crypto.DiffieHellman.prototype.setPublicKey;
+crypto.DiffieHellmanGroup.prototype.setPublicKey = function(key, encoding) {};
 
 /**
- * @type {crypto.DiffieHellman.prototype.setPrivateKey}
+ * @param {string|buffer.Buffer} key
+ * @param {string=} encoding
+ * @return {crypto.DiffieHellmanGroup}
  */
-crypto.DiffieHellmanGroup.prototype.setPrivateKey = crypto.DiffieHellman.prototype.setPrivateKey;
+crypto.DiffieHellmanGroup.prototype.setPrivateKey = function(key, encoding) {};
 
 /**
- * @type {*}
+ * @param {string} group_name
+ * @return {crypto.DiffieHellmanGroup}
  */
-crypto.randomBytes;
+crypto.getDiffieHellman = function(group_name) {};
 
 /**
- * @type {*}
+ * @param {string|buffer.Buffer} password
+ * @param {string|buffer.Buffer} salt
+ * @param {number} iterations
+ * @param {number} keylen
+ * @param {function(*, string)} callback
  */
-crypto.pseudoRandomBytes;
+crypto.pbkdf2 = function(password, salt, iterations, keylen, callback) {};
 
 /**
- * @type {crypto.randomBytes}
+ * @param {string|buffer.Buffer} password
+ * @param {string|buffer.Buffer} salt
+ * @param {number} iterations
+ * @param {number} keylen
  */
-crypto.rng = crypto.randomBytes;
+crypto.pbkdf2Sync = function(password, salt, iterations, keylen) {};
 
 /**
- * @type {crypto.pseudoRandomBytes}
+ * @param {number} size
+ * @param {function(Error, buffer.Buffer)=} callback
  */
-crypto.prng = crypto.pseudoRandomBytes;
+crypto.randomBytes = function(size, callback) {};
+
+/**
+ * @param {number} size
+ * @param {function(Error, buffer.Buffer)=} callback
+ */
+crypto.pseudoRandomBytes = function(size, callback) {};
+
+/**
+ * @param {number} size
+ * @param {function(Error, buffer.Buffer)=} callback
+ */
+crypto.rng = function(size, callback) {};
+
+/**
+ * @param {number} size
+ * @param {function(Error, buffer.Buffer)=} callback
+ */
+crypto.prng = function(size, callback) {};
 
 /**
  * @return {Array.<string>}
