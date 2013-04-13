@@ -143,7 +143,6 @@ fs.lchmodSync = function(path, mode) {};
 /**
  * @param {string} path
  * @param {function(string, fs.Stats)=} callback
- * @nosideeffects
  */
 fs.stat = function(path, callback) {};
 
@@ -157,7 +156,6 @@ fs.statSync = function(path) {}
 /**
  * @param {*} fd
  * @param {function(string, fs.Stats)=} callback
- * @nosideeffects
  */
 fs.fstat = function(fd, callback) {};
 
@@ -171,7 +169,6 @@ fs.fstatSync = function(fd) {}
 /**
  * @param {string} path
  * @param {function(string, fs.Stats)=} callback
- * @nosideeffects
  */
 fs.lstat = function(path, callback) {};
 
@@ -213,7 +210,6 @@ fs.symlinkSync = function(srcpath, dstpath, type) {};
 /**
  * @param {string} path
  * @param {function(string, string)=} callback
- * @nosideeffects
  */
 fs.readlink = function(path, callback) {};
 
@@ -226,15 +222,14 @@ fs.readlinkSync = function(path) {};
 
 /**
  * @param {string} path
- * @param {object.<string,string>|function(string, string)=} cache
+ * @param {Object.<string,string>|function(string, string)=} cache
  * @param {function(string, string)=} callback
- * @nosideeffects
  */
 fs.realpath = function(path, cache, callback) {};
 
 /**
  * @param {string} path
- * @param {object.<string,string>=} cache
+ * @param {Object.<string,string>=} cache
  * @return {string}
  * @nosideeffects
  */
@@ -277,14 +272,13 @@ fs.mkdirSync = function(path, mode) {};
 
 /**
  * @param {string} path
- * @param {function(string,array.<string>)=} callback
- * @nosideeffects
+ * @param {function(string,Array.<string>)=} callback
  */
 fs.readdir = function(path, callback) {};
 
 /**
  * @param {string} path
- * @return {array.<string>}
+ * @return {Array.<string>}
  * @nosideeffects
  */
 fs.readdirSync = function(path) {};
@@ -305,7 +299,6 @@ fs.closeSync = function(fd) {};
  * @param {string} flags
  * @param {number=} mode
  * @param {function(string, *)=} callback
- * @nosideeffects
  */
 fs.open = function(path, flags, mode, callback) {};
 
@@ -320,34 +313,32 @@ fs.openSync = function(path, flags, mode) {};
 
 /**
  * @param {string} path
- * @param {number} atime
- * @param {number} mtime
+ * @param {number|Date} atime
+ * @param {number|Date} mtime
  * @param {function(...)=} callback
- * @nosideeffects
  */
 fs.utimes = function(path, atime, mtime, callback) {};
 
 /**
  * @param {string} path
- * @param {number} atime
- * @param {number} mtime
+ * @param {number|Date} atime
+ * @param {number|Date} mtime
  * @nosideeffects
  */
 fs.utimesSync = function(path, atime, mtime) {};
 
 /**
  * @param {*} fd
- * @param {number} atime
- * @param {number} mtime
+ * @param {number|Date} atime
+ * @param {number|Date} mtime
  * @param {function(...)=} callback
- * @nosideeffects
  */
 fs.futimes = function(fd, atime, mtime, callback) {};
 
 /**
  * @param {*} fd
- * @param {number} atime
- * @param {number} mtime
+ * @param {number|Date} atime
+ * @param {number|Date} mtime
  * @nosideeffects
  */
 fs.futimesSync = function(fd, atime, mtime) {};
@@ -390,7 +381,6 @@ fs.writeSync = function(fd, buffer, offset, length, position) {};
  * @param {number} length
  * @param {number} position
  * @param {function(string, number, *)=} callback
- * @nosideeffects
  */
 fs.read = function(fd, buffer, offset, length, position, callback) {};
 
@@ -409,7 +399,6 @@ fs.readSync = function(fd, buffer, offset, length, position) {};
  * @param {string} filename
  * @param {string|function(string, *)=}encoding
  * @param {function(string, *)=} callback
- * @nosideeffects
  */
 fs.readFile = function(filename, encoding, callback) {};
 
@@ -475,7 +464,6 @@ fs.watch = function(filename, options, listener) {};
 /**
  * @param {string} path
  * @param {function(boolean)} callback
- * @nosideeffects
  */
 fs.exists = function(path, callback) {};
 
@@ -585,17 +573,17 @@ fs.Stats.prototype.blocks = 0;
 /**
  * @type {Date}
  */
-fs.Stats.prototype.atime = 0;
+fs.Stats.prototype.atime;
 
 /**
  * @type {Date}
  */
-fs.Stats.prototype.mtime = 0;
+fs.Stats.prototype.mtime;
 
 /**
  * @type {Date}
  */
-fs.Stats.prototype.ctime = 0;
+fs.Stats.prototype.ctime;
 
 /**
  * @param {string} path

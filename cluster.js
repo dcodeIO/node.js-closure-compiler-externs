@@ -29,9 +29,9 @@
  */
 
 /**
- * @extends events.EventEmitter
+ * @type events.EventEmitter
  */
-var cluster = function() {};
+var cluster;
 
 /**
  * @typedef {{exec: string, args: Array.<string>, silent: boolean}}

@@ -42,7 +42,7 @@ zlib.Options;
 
 /**
  * @constructor
- * @extends stream.WriteStream
+ * @extends stream.Transform
  */
 zlib.Zlib = function() {};
 
@@ -122,7 +122,7 @@ zlib.createInflate = function(options) {};
 
 /**
  * @param {zlib.Options} options
- * @return {zlib.ReflateRaw}
+ * @return {zlib.DeflateRaw}
  */
 zlib.createDeflateRaw = function(options) {};
 
