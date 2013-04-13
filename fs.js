@@ -143,7 +143,6 @@ fs.lchmodSync = function(path, mode) {};
 /**
  * @param {string} path
  * @param {function(string, fs.Stats)=} callback
- * @nosideeffects
  */
 fs.stat = function(path, callback) {};
 
@@ -157,7 +156,6 @@ fs.statSync = function(path) {}
 /**
  * @param {*} fd
  * @param {function(string, fs.Stats)=} callback
- * @nosideeffects
  */
 fs.fstat = function(fd, callback) {};
 
@@ -171,7 +169,6 @@ fs.fstatSync = function(fd) {}
 /**
  * @param {string} path
  * @param {function(string, fs.Stats)=} callback
- * @nosideeffects
  */
 fs.lstat = function(path, callback) {};
 
@@ -213,7 +210,6 @@ fs.symlinkSync = function(srcpath, dstpath, type) {};
 /**
  * @param {string} path
  * @param {function(string, string)=} callback
- * @nosideeffects
  */
 fs.readlink = function(path, callback) {};
 
@@ -228,7 +224,6 @@ fs.readlinkSync = function(path) {};
  * @param {string} path
  * @param {Object.<string,string>|function(string, string)=} cache
  * @param {function(string, string)=} callback
- * @nosideeffects
  */
 fs.realpath = function(path, cache, callback) {};
 
@@ -278,7 +273,6 @@ fs.mkdirSync = function(path, mode) {};
 /**
  * @param {string} path
  * @param {function(string,Array.<string>)=} callback
- * @nosideeffects
  */
 fs.readdir = function(path, callback) {};
 
@@ -305,7 +299,6 @@ fs.closeSync = function(fd) {};
  * @param {string} flags
  * @param {number=} mode
  * @param {function(string, *)=} callback
- * @nosideeffects
  */
 fs.open = function(path, flags, mode, callback) {};
 
@@ -323,7 +316,6 @@ fs.openSync = function(path, flags, mode) {};
  * @param {number|Date} atime
  * @param {number|Date} mtime
  * @param {function(...)=} callback
- * @nosideeffects
  */
 fs.utimes = function(path, atime, mtime, callback) {};
 
@@ -340,7 +332,6 @@ fs.utimesSync = function(path, atime, mtime) {};
  * @param {number|Date} atime
  * @param {number|Date} mtime
  * @param {function(...)=} callback
- * @nosideeffects
  */
 fs.futimes = function(fd, atime, mtime, callback) {};
 
@@ -390,7 +381,6 @@ fs.writeSync = function(fd, buffer, offset, length, position) {};
  * @param {number} length
  * @param {number} position
  * @param {function(string, number, *)=} callback
- * @nosideeffects
  */
 fs.read = function(fd, buffer, offset, length, position, callback) {};
 
@@ -409,7 +399,6 @@ fs.readSync = function(fd, buffer, offset, length, position) {};
  * @param {string} filename
  * @param {string|function(string, *)=}encoding
  * @param {function(string, *)=} callback
- * @nosideeffects
  */
 fs.readFile = function(filename, encoding, callback) {};
 
@@ -475,7 +464,6 @@ fs.watch = function(filename, options, listener) {};
 /**
  * @param {string} path
  * @param {function(boolean)} callback
- * @nosideeffects
  */
 fs.exists = function(path, callback) {};
 
