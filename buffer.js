@@ -36,7 +36,6 @@ var buffer = {};
 /**
  * @param {...*} var_args
  * @constructor
- * @extends Array
  * @nosideeffects
  */
 buffer.Buffer = function(var_args) {};
