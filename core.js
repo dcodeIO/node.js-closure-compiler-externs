@@ -23,10 +23,6 @@
  */
 
 /**
- */
-Object.prototype.inspect = function() {};
-
-/**
  * @param name
  * @return {*}
  */
