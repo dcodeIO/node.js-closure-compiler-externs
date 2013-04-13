@@ -57,7 +57,7 @@ ws.Server.prototype.handleUpgrade = function(request, socket, upgradeHead, callb
 
 /**
  * @param {string} address
- * @param {object.<string,*>=} options
+ * @param {Object.<string,*>=} options
  * @constructor
  * @extends events.EventEmitter
  */
@@ -84,7 +84,7 @@ ws.WebSocket.prototype.protocolVersion;
 ws.WebSocket.prototype.url;
 
 /**
- * @type {object.<string,*>}
+ * @type {Object.<string,*>}
  */
 ws.WebSocket.prototype.supports;
 
@@ -100,14 +100,14 @@ ws.WebSocket.prototype.pause = function() {};
 
 /**
  * @param {*=} data
- * @param {object.<string,*>=} options
+ * @param {Object.<string,*>=} options
  * @param {boolean=} dontFailWhenClosed
  */
 ws.WebSocket.prototype.ping = function(data, options, dontFailWhenClosed) {};
 
 /**
  * @param {*=}data
- * @param {object.<string,*>=} options
+ * @param {Object.<string,*>=} options
  * @param {boolean=} dontFailWhenClosed
  */
 ws.WebSocket.prototype.pong = function(data, options, dontFailWhenClosed) {};
@@ -118,13 +118,13 @@ ws.WebSocket.prototype.resume = function() {};
 
 /**
  * @param {*} data
- * @param {object.<string,*>=} options
+ * @param {Object.<string,*>=} options
  * @param {function(...[*])=} callback
  */
 ws.WebSocket.prototype.send = function(data, options, callback) {};
 
 /**
- * @param {object.<string,*>|function(string, boolean)} options
+ * @param {Object.<string,*>|function(string, boolean)} options
  * @param {function(string, boolean)=} callback
  */
 ws.WebSocket.prototype.stream = function(options, callback) {};
@@ -149,6 +149,6 @@ ws.WebSocket.prototype.onerror = function(error) {};
 ws.WebSocket.prototype.onclose = function(code, message) {};
 
 /**
- * @type {?function(*, object.<string,*>)}
+ * @type {?function(*, Object.<string,*>)}
  */
 ws.WebSocket.prototype.onmessage = function(data, flags) {};

@@ -226,7 +226,7 @@ fs.readlinkSync = function(path) {};
 
 /**
  * @param {string} path
- * @param {object.<string,string>|function(string, string)=} cache
+ * @param {Object.<string,string>|function(string, string)=} cache
  * @param {function(string, string)=} callback
  * @nosideeffects
  */
@@ -234,7 +234,7 @@ fs.realpath = function(path, cache, callback) {};
 
 /**
  * @param {string} path
- * @param {object.<string,string>=} cache
+ * @param {Object.<string,string>=} cache
  * @return {string}
  * @nosideeffects
  */
@@ -277,14 +277,14 @@ fs.mkdirSync = function(path, mode) {};
 
 /**
  * @param {string} path
- * @param {function(string,array.<string>)=} callback
+ * @param {function(string,Array.<string>)=} callback
  * @nosideeffects
  */
 fs.readdir = function(path, callback) {};
 
 /**
  * @param {string} path
- * @return {array.<string>}
+ * @return {Array.<string>}
  * @nosideeffects
  */
 fs.readdirSync = function(path) {};

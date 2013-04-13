@@ -63,7 +63,7 @@ Preprocessor.indent = function(str, indent) {};
 Preprocessor.nlToStr = function(str) {};
 
 /**
- * @param {object.<strin,string>} defines
+ * @param {Object.<string,string>} defines
  * @param {string} expr
  * @return {*}
  * @throws {Error}
@@ -72,7 +72,7 @@ Preprocessor.nlToStr = function(str) {};
 Preprocessor.evaluate = function(defines, expr) {};
 
 /**
- * @param {object.<string,*>} directives
+ * @param {Object.<string,*>} directives
  * @return {string}
  */
 Preprocessor.prototype.process = function(directives) {};
