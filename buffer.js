@@ -106,7 +106,6 @@ buffer.Buffer.prototype.length;
  * @param {number=} sourceStart
  * @param {number=} sourceEnd
  * @return {buffer.Buffer}
- * @nosideeffects
  */
 buffer.Buffer.prototype.copy = function(targetBuffer, targetStart, sourceStart, sourceEnd){};
 
