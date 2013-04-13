@@ -82,40 +82,14 @@ tls.SecurePair = function() {};
 tls.Server = function() {};
 
 /**
- * @param {number} port
- * @param {(string|function(...))=} host
- * @param {function(...)=} callback
- */
-tls.Server.prototype.listen = function(port, host, callback) {};
-
-/**
- */
-tls.Server.prototype.close = function() {};
-
-/**
- * @return {{port: number, family: string, address: string}}
- */
-tls.Server.prototype.address = function() {};
-
-/**
  * @param {string} hostname
  * @param {string|buffer.Buffer} credentials
  */
 tls.Server.prototype.addContext = function(hostname, credentials) {};
 
 /**
- * @type {number}
- */
-tls.Server.prototype.maxConnections;
-
-/**
- * @type {number}
- */
-tls.Server.prototype.connections;
-
-/**
  * @constructor
- * @extends stream
+ * @extends stream.Duplex
  */
 tls.CleartextStream = function() {};
 

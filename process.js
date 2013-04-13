@@ -43,7 +43,7 @@ process.stdout;
 process.stderr;
 
 /**
- * @type {array.<string>}
+ * @type {Array.<string>}
  */
 process.argv;
 
@@ -68,7 +68,7 @@ process.chdir = function(directory) {};
 process.cwd = function() {};
 
 /**
- * @type {object.<string,string>}
+ * @type {Object.<string,string>}
  */
 process.env;
 
@@ -110,7 +110,7 @@ process.version;
 process.versions;
 
 /**
- * @type {object.<string,*>}
+ * @type {Object.<string,*>}
  */
 process.config;
 
@@ -141,7 +141,7 @@ process.arch;
 process.platform;
 
 /**
- * @return {object.<string,number>}
+ * @return {Object.<string,number>}
  * @nosideeffects
  */
 process.memoryUsage = function() {};

@@ -34,7 +34,7 @@
 var repl = {};
 
 /**
- * @param {{prompt: ?string, input: ?stream, output: ?stream, terminal: ?boolean, eval: ?function(string), useColors: ?boolean, useGlobal: ?boolean, ignoreUndefined: ?boolean, writer: ?function(string)}} options
+ * @param {{prompt: ?string, input: ?stream.Readable, output: ?stream.Writable, terminal: ?boolean, eval: ?function(string), useColors: ?boolean, useGlobal: ?boolean, ignoreUndefined: ?boolean, writer: ?function(string)}} options
  * @return {repl.REPLServer}
  */
 repl.start = function(options) {};

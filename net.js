@@ -72,7 +72,7 @@ net.Server = function() {};
 
 /**
  * 
- * @param {mumber|*} port
+ * @param {number|*} port
  * @param {(string|number|function(...))=} host
  * @param {(number|function(...))=} backlog
  * @param {function(...)=} callback
@@ -107,7 +107,7 @@ net.Server.prototype.connections;
 net.Socket = function(options) {};
 
 /**
- * @param {number|string|function(..)} port
+ * @param {number|string|function(...)} port
  * @param {(string|function(...))=} host
  * @param {function(...)=} connectListener
  */
