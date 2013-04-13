@@ -48,7 +48,7 @@ ws.Server = function(options, callback) {};
 ws.Server.prototype.close = function(code, data) {};
 
 /**
- * @param {http.ServerRequest} request
+ * @param {http.IncomingMessage} request
  * @param {net.Socket} socket
  * @param {string} upgradeHead
  * @param {function(...)} callback

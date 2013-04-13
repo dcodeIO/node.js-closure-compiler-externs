@@ -30,7 +30,7 @@ END_NODE_INCLUDE
 var http = {};
 
 /**
- * @typedef {function(http.ServerRequest, http.ServerResponse)}
+ * @typedef {function(http.IncomingMessage, http.ServerResponse)}
  */
 http.requestListener;
 
@@ -60,63 +60,65 @@ http.Server.prototype.close = function() {};
 
 /**
  * @constructor
- * @extends events.EventEmitter
- * @private
+ * @extends stream.Readable
  */
-http.ServerRequest = function() {};
+http.IncomingMessage = function() {};
 
 /**
- * @type {string}
+ * @type {?string}
  * */
-http.ServerRequest.prototype.method;
+http.IncomingMessage.prototype.method;
 
 /**
- * @type {string}
+ * @type {?string}
  */
-http.ServerRequest.prototype.url;
+http.IncomingMessage.prototype.url;
 
 /**
  * @type {Object}
  * */
-http.ServerRequest.prototype.headers;
+http.IncomingMessage.prototype.headers;
 
 /**
  * @type {Object}
  * */
-http.ServerRequest.prototype.trailers;
+http.IncomingMessage.prototype.trailers;
 
 /**
  * @type {string}
  */
-http.ServerRequest.prototype.httpVersion;
+http.IncomingMessage.prototype.httpVersion;
 
 /**
  * @type {string}
  */
-http.ServerRequest.prototype.httpVersionMajor;
+http.IncomingMessage.prototype.httpVersionMajor;
 
 /**
  * @type {string}
  */
-http.ServerRequest.prototype.httpVersionMinor;
-
-/**
- * @param {?string} encoding
- */
-http.ServerRequest.prototype.setEncoding = function(encoding) {};
-
-/**
- */
-http.ServerRequest.prototype.pause = function() {};
-
-/**
- */
-http.ServerRequest.prototype.resume = function() {};
+http.IncomingMessage.prototype.httpVersionMinor;
 
 /**
  * @type {*}
  */
-http.ServerRequest.prototype.connection;
+http.IncomingMessage.prototype.connection;
+
+/**
+ * @type {?number}
+ */
+http.IncomingMessage.prototype.statusCode;
+
+/**
+ * @type {net.Socket}
+ */
+http.IncomingMessage.prototype.socket;
+
+/**
+ * @param {number} msecs
+ * @param {function()} callback
+ */
+http.IncomingMessage.prototype.setTimeout = function(msecs, callback) {};
 
 /**
  * @constructor
@@ -199,65 +201,15 @@ http.ClientRequest.prototype.end = function(data, encoding) {};
 http.ClientRequest.prototype.abort = function() {};
 
 /**
- * @constructor
- * @extends events.EventEmitter
- * @private
- */
-http.ClientResponse = function() {};
-
-/**
- * @type {number}
- */
-http.ClientResponse.prototype.statusCode;
-
-/**
- * @type {string}
- */
-http.ClientResponse.prototype.httpVersion;
-
-/**
- * @type {string}
- */
-http.ClientResponse.prototype.httpVersionMajor;
-
-/**
- * @type {string}
- */
-http.ClientResponse.prototype.httpVersionMinor;
-
-/**
- * @type {Object}
- * */
-http.ClientResponse.prototype.headers;
-
-/**
- * @type {Object}
- * */
-http.ClientResponse.prototype.trailers;
-
-/**
- * @param {?string} encoding
- */
-http.ClientResponse.prototype.setEncoding = function(encoding) {};
-
-/**
- */
-http.ClientResponse.prototype.pause = function() {};
-
-/**
- */
-http.ClientResponse.prototype.resume = function() {};
-
-/**
  * @param {Object} options
- * @param {function(http.ClientResponse)} callback
+ * @param {function(http.IncomingMessage)} callback
  * @return {http.ClientRequest}
  */
 http.request = function(options, callback) {};
 
 /**
  * @param {Object} options
- * @param {function(http.ClientResponse)} callback
+ * @param {function(http.IncomingMessage)} callback
  * @return {http.ClientRequest}
  */
 http.get = function(options, callback) {};
