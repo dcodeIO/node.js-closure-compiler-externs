@@ -108,7 +108,7 @@ child_process.execFile = function(file, args, options, callback) {};
 /**
  * @param {string} modulePath
  * @param {Array.<string>=} args
- * @param {child_process.Options} options
+ * @param {child_process.Options=} options
  * @return {child_process.ChildProcess}
  */
 child_process.fork = function(modulePath, args, options) {};
