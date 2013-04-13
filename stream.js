@@ -28,16 +28,21 @@
  END_NODE_INCLUDE
  */
 
-/**
- * @constructor
- * @extends events.EventEmitter
- */
-var stream = function() {};
+var stream = {};
 
 /**
- * @type {stream}
+ * @constructor
+ * @param {Object=} options
+ * @extends events.EventEmitter
  */
-stream.Stream = function() {};
+stream.Stream = function(options) {};
+
+/**
+ * @param {stream.Writable} dest
+ * @param {{end: boolean}=} pipeOpts
+ * @return {stream.Writable}
+ */
+stream.Stream.prototype.pipe = function(dest, pipeOpts) {};
 
 /**
  * @constructor
@@ -99,23 +104,25 @@ stream.WritableStream.prototype.destroySoon = function() {};
 /**
  * @constructor
  * @param {Object=} options
- * @extends stream
+ * @extends stream.Stream
  */
 stream.Readable = function(options) {};
 
 /**
  * @type {boolean}
+ * @deprecated
  */
 stream.Readable.prototype.readable;
 
 /**
- * @param {string|buffer.Buffer} chunk
+ * @protected
+ * @param {string|buffer.Buffer|null} chunk
  * @return {boolean}
  */
 stream.Readable.prototype.push = function(chunk) {};
 
 /**
- * @param {string|buffer.Buffer} chunk
+ * @param {string|buffer.Buffer|null} chunk
  * @return {boolean}
  */
 stream.Readable.prototype.unshift = function(chunk) {};
@@ -126,26 +133,19 @@ stream.Readable.prototype.unshift = function(chunk) {};
 stream.Readable.prototype.setEncoding = function(enc) {};
 
 /**
- * @param {number} n
- * @return {buffer.Buffer}
+ * @param {number=} n
+ * @return {buffer.Buffer|string|null}
  */
 stream.Readable.prototype.read = function(n) {};
 
 /**
+ * @protected
  * @param {number} n
- * @return {?buffer.Buffer}
  */
 stream.Readable.prototype._read = function(n) {};
 
 /**
- * @param {stream.Writable} dest
- * @param {{end: boolean}=} pipeOpts
- * @return {stream.Writable}
- */
-stream.Readable.prototype.pipe = function(dest, pipeOpts) {};
-
-/**
- * @param {stream.Writable} dest
+ * @param {stream.Writable=} dest
  * @return {stream.Readable}
  */
 stream.Readable.prototype.unpipe = function(dest) {};
@@ -159,46 +159,44 @@ stream.Readable.prototype.resume = function() {};
 stream.Readable.prototype.pause = function() {};
 
 /**
- * @param {stream} stream
+ * @param {stream.Stream} stream
+ * @return {stream.Readable}
  */
 stream.Readable.prototype.wrap = function(stream) {};
 
 /**
  * @constructor
  * @param {Object=} options
- * @extends stream
+ * @extends stream.Stream
  */
 stream.Writable = function(options) {};
 
 /**
+ * @deprecated
  * @type {boolean}
  */
 stream.Writable.prototype.writable;
 
 /**
- */
-stream.Writable.prototype.pipe = function() {};
-
-/**
  * @param {string|buffer.Buffer} chunk
- * @param {(string|function(...))=} encoding
- * @param {function(...)=} cb
+ * @param {string=} encoding
+ * @param {function(*=)=} cb
  * @return {boolean}
  */
 stream.Writable.prototype.write = function(chunk, encoding, cb) {};
 
 /**
+ * @protected
  * @param {string|buffer.Buffer} chunk
- * @param {(string|function(...))=} encoding
- * @param {function(...)=} cb
+ * @param {string} encoding
+ * @param {function(*=)} cb
  */
 stream.Writable.prototype._write = function(chunk, encoding, cb) {};
 
 /**
- * @param {string|buffer.Buffer} chunk
- * @param {(string|function(...))=} encoding
- * @param {function(...)=} cb
- * @return {boolean}
+ * @param {string|buffer.Buffer=} chunk
+ * @param {string=} encoding
+ * @param {function(*=)=} cb
  */
 stream.Writable.prototype.end = function(chunk, encoding, cb) {};
 
@@ -206,7 +204,7 @@ stream.Writable.prototype.end = function(chunk, encoding, cb) {};
  * @constructor
  * @param {Object=} options
  * @extends stream.Readable
- * @implements stream.Writable
+ * Xextends stream.Writable
  */
 stream.Duplex = function(options) {};
 
@@ -224,11 +222,18 @@ stream.Duplex.prototype.allowHalfOpen;
 stream.Transform = function(options) {};
 
 /**
+ * @protected
  * @param {string|buffer.Buffer} chunk
- * @param {*} output
+ * @param {string} encoding
  * @param {function(*=)} cb
  */
-stream.Transform._transform = function(chunk, output, cb) {};
+stream.Transform._transform = function(chunk, encoding, cb) {};
+
+/**
+ * @protected
+ * @param {function(*=)} cb
+ */
+stream.Transform._flush = function(cb) {};
 
 /**
  * @param {Object=} options

@@ -115,7 +115,7 @@ tls.Server.prototype.connections;
 
 /**
  * @constructor
- * @extends stream
+ * @extends stream.Duplex
  */
 tls.CleartextStream = function() {};
 

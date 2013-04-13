@@ -42,7 +42,7 @@ zlib.Options;
 
 /**
  * @constructor
- * @extends stream.WriteStream
+ * @extends stream.Transform
  */
 zlib.Zlib = function() {};
 
