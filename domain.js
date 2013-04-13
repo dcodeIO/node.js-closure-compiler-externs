@@ -54,7 +54,7 @@ domain.Domain.prototype.run = function(fn) {};
 domain.Domain.prototype.members;
 
 /**
- * @param {events.Emitter} emitter
+ * @param {events.EventEmitter} emitter
  */
 domain.Domain.prototype.add = function(emitter) {};
 
