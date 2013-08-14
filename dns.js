@@ -141,7 +141,7 @@ dns.BADQUERY = 'EBADQUERY';
  * @type {string}
  * @const
  */
-dns.BADNAME = 'EADNAME';
+dns.BADNAME = 'EBADNAME';
 
 /**
  * @type {string}
