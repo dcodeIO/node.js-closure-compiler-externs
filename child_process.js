@@ -90,8 +90,8 @@ child_process.ChildProcess.spawn = function(command, args, options) {};
 
 /**
  * @param {string} command
- * @param {child_process.Options|function(Error, Buffer, Buffer)=} options
- * @param {function(Error, Buffer, Buffer)=} callback
+ * @param {child_process.Options|function(Error, buffer.Buffer, buffer.Buffer)=} options
+ * @param {function(Error, buffer.Buffer, buffer.Buffer)=} callback
  * @return {child_process.ChildProcess}
  */
 child_process.exec = function(command, options, callback) {};
@@ -100,7 +100,7 @@ child_process.exec = function(command, options, callback) {};
  * @param {string} file
  * @param {Array.<string>} args
  * @param {child_process.Options} options
- * @param {function(Error, Buffer, Buffer)} callback
+ * @param {function(Error, buffer.Buffer, buffer.Buffer)} callback
  * @return {child_process.ChildProcess}
  */
 child_process.execFile = function(file, args, options, callback) {};
@@ -108,7 +108,7 @@ child_process.execFile = function(file, args, options, callback) {};
 /**
  * @param {string} modulePath
  * @param {Array.<string>=} args
- * @param {child_process.Options} options
+ * @param {child_process.Options=} options
  * @return {child_process.ChildProcess}
  */
 child_process.fork = function(modulePath, args, options) {};

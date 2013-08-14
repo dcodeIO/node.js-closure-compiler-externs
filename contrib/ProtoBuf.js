@@ -27,7 +27,7 @@
  */
 
 /**
- * {@type object.<string.*>}
+ * {@type Object.<string.*>}
  */
 var ProtoBuf = {};
 
@@ -38,7 +38,7 @@ var ProtoBuf = {};
 ProtoBuf.VERSION = "0.9.2";
 
 /**
- * @type {!object.<string,number>}
+ * @type {!Object.<string,number>}
  * @const
  */
 ProtoBuf.WIRE_TYPES = {};
@@ -81,7 +81,7 @@ ProtoBuf.WIRE_TYPES.BITS32 = 5;
 
 /**
  * @dict
- * @type {!object.<string,{name: string, wireType: number}>}
+ * @type {!Object.<string,{name: string, wireType: number}>}
  * @const
  */
 ProtoBuf.TYPES = {
@@ -136,12 +136,12 @@ ProtoBuf.TYPES = {
 };
 
 /**
- * @type {!object.<string,string|RegExp>}
+ * @type {!Object.<string,string|RegExp>}
  */
 ProtoBuf.Lang = {};
 
 /**
- * @type {!object.<string,function>}
+ * @type {!Object.<string,function>}
  */
 ProtoBuf.DotProto = {};
 
@@ -162,7 +162,7 @@ ProtoBuf.DotProto.Tokenizer.prototype.source;
 ProtoBuf.DotProto.Tokenizer.prototype.index;
 
 /**
- * @type {array.<string>}
+ * @type {Array.<string>}
  */
 ProtoBuf.DotProto.Tokenizer.prototype.stack;
 

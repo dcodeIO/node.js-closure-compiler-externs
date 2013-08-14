@@ -47,7 +47,7 @@ https.Server.prototype.close = function(callback) {};
 
 /**
  * @param {tls.CreateOptions} options
- * @param {function(https.Request, https.Response)=} requestListener
+ * @param {function(http.IncomingMessage, http.ServerResponse)=} requestListener
  */
 https.createServer = function(options, requestListener) {};
 
@@ -58,14 +58,14 @@ https.ConnectOptions;
 
 /**
  * @param {https.ConnectOptions|string} options
- * @param {function(http.ClientResponse)} callback
+ * @param {function(http.IncomingMessage)} callback
  * @return {http.ClientRequest}
  */
 https.request = function(options, callback) {};
 
 /**
  * @param {https.ConnectOptions|string} options
- * @param {function(http.ClientResponse)} callback
+ * @param {function(http.IncomingMessage)} callback
  * @return {http.ClientRequest}
  */
 https.get = function(options, callback) {};

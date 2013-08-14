@@ -72,7 +72,7 @@ os.release = function() {};
 os.uptime = function() {};
 
 /**
- * @return {array.<number>}
+ * @return {Array.<number>}
  * @nosideeffects
  */
 os.loadavg = function() {};
@@ -95,7 +95,7 @@ os.freemem = function() {};
 var osCpusInfo;
 
 /**
- * @return {array.<osCpusInfo>}
+ * @return {Array.<osCpusInfo>}
  * @nosideeffects
  */
 os.cpus = function() {};
@@ -106,7 +106,7 @@ os.cpus = function() {};
 var osNetworkInterfacesInfo;
 
 /**
- * @return {object.<string,osNetworkInterfacesInfo>}
+ * @return {Object.<string,osNetworkInterfacesInfo>}
  * @nosideeffects
  */
 os.networkInterfaces = function() {};

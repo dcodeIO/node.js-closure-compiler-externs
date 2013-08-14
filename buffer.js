@@ -36,7 +36,6 @@ var buffer = {};
 /**
  * @param {...*} var_args
  * @constructor
- * @extends Array
  * @nosideeffects
  */
 buffer.Buffer = function(var_args) {};
@@ -107,7 +106,6 @@ buffer.Buffer.prototype.length;
  * @param {number=} sourceStart
  * @param {number=} sourceEnd
  * @return {buffer.Buffer}
- * @nosideeffects
  */
 buffer.Buffer.prototype.copy = function(targetBuffer, targetStart, sourceStart, sourceEnd){};
 
