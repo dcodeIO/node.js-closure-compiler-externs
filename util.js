@@ -68,13 +68,14 @@ util.log = function(string) {};
 
 /**
  * @param {*} object
- * @param {boolean=} showHidden
- * @param {number=} depth
- * @param {boolean=} colors
+ * @param {{showHidden: (boolean|undefined),
+ *          depth: (number|null|undefined),
+ *          colors: (boolean|undefined),
+ *          customInspect: (boolean|undefined)}=} options
  * @return {string}
  * @nosideeffects
  */
-util.inspect = function(object, showHidden, depth, colors) {};
+util.inspect;
 
 /**
  * @param {*} object
