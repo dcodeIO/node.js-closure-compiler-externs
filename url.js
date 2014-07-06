@@ -36,19 +36,19 @@ var url = {};
 /**
  * @typedef {{href: ?string, protocol: ?string, host: ?string, auth: ?string, hostname: ?string, port: ?string, pathname: ?string, search: ?string, path: ?string, query: ?string, hash: ?string}}
  */
-var URL;
+url.URL;
 
 /**
  * @param {string} urlStr
  * @param {boolean=} parseQueryString
  * @param {boolean=} slashesDenoteHost
- * @return {URL}
+ * @return {url.URL}
  * @nosideeffects
  */
 url.parse = function(urlStr, parseQueryString, slashesDenoteHost) {};
 
 /**
- * @param {URL} urlObj
+ * @param {url.URL} urlObj
  * @return {string}
  * @nosideeffects
  */
