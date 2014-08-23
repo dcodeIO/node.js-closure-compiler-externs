@@ -1,6 +1,6 @@
 {
     "name": "closurecompiler-externs",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "author": "Daniel Wirtz <dcode@dcode.io>",
     "description": "A collection of node.js externs for use with ClosureCompiler.js.",
     "contributors": [
