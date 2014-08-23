@@ -397,32 +397,33 @@ fs.readSync = function(fd, buffer, offset, length, position) {};
 
 /**
  * @param {string} filename
- * @param {string|function(string, *)=}encoding
- * @param {function(string, *)=} callback
+ * @param {string|{encoding:(string|undefined),flag:(string|undefined)}|function(string, (string|buffer.Buffer))=} encodingOrOptions
+ * @param {function(string, (string|buffer.Buffer))=} callback
  */
-fs.readFile = function(filename, encoding, callback) {};
+fs.readFile = function(filename, encodingOrOptions, callback) {};
 
 /**
  * @param {string} filename
- * @param {string=} encoding
+ * @param {string|{encoding:(string|undefined),flag:(string|undefined)}=} encodingOrOptions
+ * @return {string|buffer.Buffer}
  * @nosideeffects
  */
-fs.readFileSync = function(filename, encoding) {};
+fs.readFileSync = function(filename, encodingOrOptions) {};
 
 /**
  * @param {string} filename
  * @param {*} data
- * @param {string|function(string)=} encoding
+ * @param {string|{encoding:(string|undefined),mode:(number|undefined),flag:(string|undefined)}|function(string)=} encodingOrOptions
  * @param {function(string)=} callback
  */
-fs.writeFile = function(filename, data, encoding, callback) {};
+fs.writeFile = function(filename, data, encodingOrOptions, callback) {};
 
 /**
  * @param {string} filename
  * @param {*} data
- * @param {string=} encoding
+ * @param {string|{encoding:(string|undefined),mode:(number|undefined),flag:(string|undefined)}|function(string)=} encodingOrOptions
  */
-fs.writeFileSync = function(filename, data, encoding) {};
+fs.writeFileSync = function(filename, data, encodingOrOptions) {};
 
 /**
  * @param {string} filename
