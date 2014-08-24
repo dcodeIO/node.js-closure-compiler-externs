@@ -44,6 +44,11 @@ require.cache;
 require.extensions;
 
 /**
+ * @type {Object}
+ */
+require.main;
+
+/**
  * @type {string}
  */
 var __filename;
