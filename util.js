@@ -79,6 +79,16 @@ util.inspect;
 
 /**
  * @param {*} object
+ */
+util.inspect.styles;
+
+/**
+ * @param {*} object
+ */
+util.inspect.colors;
+
+/**
+ * @param {*} object
  * @return {boolean}
  * @nosideeffects
  */
