@@ -58,6 +58,19 @@ fs.truncateSync = function(fd, len) {};
 
 /**
  * @param {string} path
+ * @param {number=} mode
+ * @param {function(...)=} callback
+ */
+fs.access = function(path, mode, callback) {};
+
+/**
+ * @param {string} path
+ * @param {number=} mode
+ */
+fs.accessSync = function(path, mode) {};
+
+/**
+ * @param {string} path
  * @param {number} uid
  * @param {number} gid
  * @param {function(...)=} callback
@@ -454,7 +467,7 @@ fs.watchFile = function(filename, options, listener) {};
 fs.unwatchFile = function(filename, listener) {};
 
 /**
- * 
+ *
  * @param {string} filename
  * @param {{persistent: boolean}|function(string, string)=} options
  * @param {function(string, string)=} listener
