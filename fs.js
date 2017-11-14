@@ -439,6 +439,21 @@ fs.writeFile = function(filename, data, encodingOrOptions, callback) {};
 fs.writeFileSync = function(filename, data, encodingOrOptions) {};
 
 /**
+ * @param {string} src
+ * @param {string} dest
+ * @param {number|function(...)=} flags
+ * @param {function(...)=} callback
+ */
+fs.copyFile = function(src, dest, flags, callback) {};
+
+/**
+ * @param {string} src
+ * @param {string} dest
+ * @param {number=} flags
+ */
+fs.copyFileSync = function(src, dest, flags) {};
+
+/**
  * @param {string} filename
  * @param {*} data
  * @param {string|function(string)=} encoding
