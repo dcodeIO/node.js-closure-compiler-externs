@@ -30,6 +30,16 @@
 
 var fs = {};
 
+
+
+/** @enum {number} */
+fs.constants = {};
+
+/**
+ * @type {number}
+ */
+fs.constants.R_OK;
+
 /**
  * @param {string} oldPath
  * @param {string} newPath
