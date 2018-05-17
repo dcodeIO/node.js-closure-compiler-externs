@@ -103,7 +103,3 @@ module.children;
  */
 var global = {};
 
-/**
- * @type {buffer.Buffer}
- */
-var Buffer;

@@ -29,18 +29,21 @@ for (var i=0; i<files.length; i++) {
         externs.push("./"+files[i]);
     }
 }
-/* files = fs.readdirSync("./contrib");
+/*
+files = fs.readdirSync("./contrib");
 for (i=0; i<files.length; i++) {
     if (pattern.test(files[i])) {
         externs.push("./contrib/"+files[i]);
     }
-} */
+}
+*/
 
 console.log("Validating "+externs.length+" files:\n", externs);
 ClosureCompiler.compile("./tests/noop.js", {
-	"compilation_level": "ADVANCED_OPTIMIZATIONS",
-	"warning_level": "verbose",
-	"externs": externs
+    "compilation_level": "ADVANCED_OPTIMIZATIONS",
+    "warning_level": "verbose",
+    "env": "CUSTOM",
+    "externs": externs
 }, function(error, result) {
     if (error) {
         throw(error);

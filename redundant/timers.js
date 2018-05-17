@@ -23,7 +23,7 @@
  */
 
 /**
- * @param {function(...[*])} callback
+ * @param {function(...)} callback
  * @param {number} delay
  * @param {...*} var_args
  * @return {*}
@@ -36,7 +36,7 @@ function setTimeout(callback, delay, var_args) {};
 function clearTimeout(timeoutId) {};
 
 /**
- * @param {function(...[*])} callback
+ * @param {function(...)} callback
  * @param {number} delay
  * @param {...*} var_args
  * @return {*}

@@ -4,7 +4,10 @@
     "author": "Daniel Wirtz <dcode@dcode.io>",
     "description": "A collection of node.js externs for use with ClosureCompiler.js.",
     "contributors": [
-        { "name": "Daniel Wirtz", "email": "dcode@dcode.io" }
+        {
+            "name": "Daniel Wirtz",
+            "email": "dcode@dcode.io"
+        }
     ],
     "repository": {
         "type": "git",

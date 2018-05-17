@@ -28,14 +28,17 @@
  END_NODE_INCLUDE
  */
 
+
+
+ 
 /**
  * @type {Object.<string,*>}
  */
 var buffer = {};
 
 /**
- * @param {...*} var_args
  * @constructor
+ * @param {...*} var_args
  * @nosideeffects
  */
 buffer.Buffer = function(var_args) {};
